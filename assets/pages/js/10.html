@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/hamburger.menu.css" />
+		<link rel="stylesheet" href="/css/toCOurse.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<title>JS 10</title>
+		<link
+			rel="icon"
+			href="/assets/img/free-icon-graduate-5404967.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<section class="top-nav">
+			<div class="block-logo">
+				<img src="/assets/img/free-icon-graduate-5404967.png" alt="" />
+				<h1>ItCourse</h1>
+			</div>
+			<input id="menu-toggle" type="checkbox" />
+			<label class="menu-button-container" for="menu-toggle">
+				<div class="menu-button"></div>
+			</label>
+			<ul class="menu">
+				<li class="active"><a href="/index.html">Главная</a></li>
+				<li><a href="/assets/courses.html">Курсы</a></li>
+			</ul>
+		</section>
+		<div class="conteiner">
+			<a href="/assets/home-page-js.html"
+				><div class="before">
+					<i class="bx bx-right-arrow-alt"></i></div
+			></a>
+			<h1 style="text-align: center">Функции в языке JavaScript</h1>
+			<p>
+				Функции в JavaScript выполняют важную роль. Они обеспечивают сокращение
+				кода за счет вынесения его в отдельные места. За урок мы научимся
+				создавать функции и передавать в них значения.
+			</p>
+			<div class="block-video">
+				<h2>Видео урок</h2>
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/yUTwuyfTsOc?si=AGqzQukDmQ8Z4GZa"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; 
+					autoplay; 
+					clipboard-write; 
+					encrypted-media; 
+					gyroscope; 
+					picture-in-picture; 
+					web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				>
+				</iframe>
+			</div>
+			<p>
+				Функции можно назвать небольшими подпрограммами, куда можно вынести
+				повторяющийся код и обращаться к нему, когда это будет нужно. Функции
+				значительно облегчают построение программ, так как нам не надо
+				копировать однотипный код множество раз, а можно просто воспользоваться
+				одной общей функцией.
+				<br />
+				<br />
+				Многие путают функции и методы и не понимают отличий между ними. На
+				самом деле отличий нет, так как что методы, что функции являются одним и
+				тем же. Функции что записаны вне классов называют функциями, а функции
+				что записаны внутри классов называются методами.
+				<br />
+				<br />
+				Точно такая же ситуация обстоит с переменным. В классах переменные
+				называются полями, а вне классов - переменными.
+				<br />
+				<br />
+				В JS функции создаются при помощи ключевого слова
+				<code>function</code>. Каждая функция может иметь какие-либо параметры
+				или же не иметь их вовсе. Функции способны что-либо возвращать в ходе
+				выполнения кода, если это требуется.
+			</p>
+			<h2>
+				Создание функции
+			</h2>
+			<p>
+				На основе всех данных наша функция будет выглядеть следующим образом:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_23.png" alt="">
+			</div>
+			<p>
+				Функция выше не принимает никаких параметров и ничего не возвращает. Она просто пишет слово в консоль. Давайте разнообразим функцию и добавим параметр:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_24.png" alt="">
+			</div>
+			<p>
+				Теперь функция принимает параметр, который будет отображен в консоли.
+				<br> <br>
+				Если функция должна что-либо вернуть, то прописываем тип данных который будет возвращен. Для возвращения данных используем ключевое слово <code>return</code>:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_25.png" alt="">
+			</div>
+			<h2>Локальные и глобальные переменные</h2>
+			<p>
+				В <b>JavaScript</b> есть несколько полей видимости: локальная и глобальная. Если записать глобальную переменную, то такая переменная будем видна повсюду и с ней можно работать отовсюду в документе. Если записать локальную переменную, то такая переменная будет видна лишь в той области, где она записана.
+				<br>
+				<br>
+				Для создания глобальной переменной её необходимо прописать вне функции, класса или же объекта. Для создания локальных переменных вам достаточно поместить переменную в функцию. Переменная в функции будет видна лишь внутри блока с функцией и нигде более.
+			</p>
+		</div>
+	</body>
+</html>

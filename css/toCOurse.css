@@ -1,0 +1,169 @@
+:root {
+	--whiteColor: #e9eaf8;
+	--codeDarkColor: #22232e;
+}
+
+p {
+	width: 100%;
+	background: var(--darkColor);
+	color: var(--whiteColor);
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-top: 10px;
+	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+	margin-top: 10px;
+}
+
+h5::before {
+	content: '➡️';
+	margin-right: 10px;
+}
+
+h5 {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.block-5 {
+	width: 100%;
+	background: var(--darkColor);
+	color: var(--whiteColor);
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-top: 10px;
+	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+	margin-top: 10px;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+.conteiner {
+	width: 70%;
+	margin: 0 auto;
+}
+
+h3 {
+	margin-top: 10px;
+}
+
+code {
+	background: rgb(31, 30, 30);
+	color: rgb(245, 74, 0);
+	text-align: start;
+	padding: 2px 4px;
+}
+
+.block-code img {
+	width: 70%;
+}
+
+.block-code {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.code {
+	width: 100%;
+	background: var(--darkColor);
+	color: var(--whiteColor);
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-top: 10px;
+	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+	margin-top: 10px;
+}
+
+.block-video {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.before {
+	padding: 10px;
+	background: blueviolet;
+	transform: rotate(180deg);
+	font-size: 25px;
+	position: fixed;
+	top: 50px;
+	left: 0;
+	transition: 0.3s;
+	color: black;
+}
+
+.before:hover {
+	background: black;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.conteiner ul {
+	width: 100%;
+	background: var(--darkColor);
+	color: var(--orangeColor);
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-top: 10px;
+	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+}
+
+.conteiner ul li {
+	margin-bottom: 10px;
+}
+
+.conteiner ul li::before {
+	content: '➡️';
+	margin-right: 10px;
+}
+
+.red:hover {
+	color: #fff;
+	background: blueviolet;
+}
+
+.red {
+	color: #fff;
+	background-color: #e06149;
+	z-index: 1;
+}
+
+.red {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 0.65em 1.3em;
+	position: relative;
+	transition: all 700ms ease;
+}
+
+.btn1 {
+	cursor: pointer;
+	font-weight: 500;
+	overflow: hidden;
+	display: inline-block;
+	border: initial;
+	vertical-align: middle;
+}
+
+.conteiner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
