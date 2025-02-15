@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/hamburger.menu.css" />
+		<link rel="stylesheet" href="/css/toCOurse.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<title>JS 9</title>
+		<link
+			rel="icon"
+			href="/assets/img/free-icon-graduate-5404967.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<section class="top-nav">
+			<div class="block-logo">
+				<img src="/assets/img/free-icon-graduate-5404967.png" alt="" />
+				<h1>ItCourse</h1>
+			</div>
+			<input id="menu-toggle" type="checkbox" />
+			<label class="menu-button-container" for="menu-toggle">
+				<div class="menu-button"></div>
+			</label>
+			<ul class="menu">
+				<li class="active"><a href="/index.html">Главная</a></li>
+				<li><a href="/assets/courses.html">Курсы</a></li>
+			</ul>
+		</section>
+		<div class="conteiner">
+			<a href="/assets/home-page-js.html"
+				><div class="before">
+					<i class="bx bx-right-arrow-alt"></i></div
+			></a>
+			<h1 style="text-align: center">
+				Всплывающие окна (alert, prompt, confirm)
+			</h1>
+			<p>
+				В языке JavaScript есть несколько встроенных функций, что обеспечивают
+				создание всплывающих окон. За урок мы рассмотрим три функции, что
+				предоставляют возможность реализации всплывающих окон с разным набором
+				действий. Мы изучим методы: alert, confirm и prompt.
+			</p>
+			<div class="block-video">
+				<h2>Видео урок</h2>
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/UCSuoEJ50G8?si=wJ0kU3RbWwgNGTEv"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; 
+					autoplay; 
+					clipboard-write; 
+					encrypted-media; 
+					gyroscope; 
+					picture-in-picture; 
+					web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				>
+				</iframe>
+			</div>
+			<p>
+				Для работы с пользователем в JavaScript предусмотрено несколько
+				интерактивных функций:
+			</p>
+			<ul>
+				<li>
+					функция <code>alert()</code> позволяет выводить информацию во
+					всплывающем окне;
+				</li>
+				<li>
+					функция <code>confirm()</code> позволяет спрашивать соглашение во
+					всплывающем окне;
+				</li>
+				<li>
+					функция <code>prompt()</code> получает данные от пользователя во
+					всплывающем окне.
+				</li>
+			</ul>
+			<p>
+				Функция <b>alert</b> позволяет вывести какую-либо информацию во
+				всплывающем окне в браузере. К таким окнам нельзя добавить стили и
+				разукрасить их.
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_19.png" alt="" />
+			</div>
+			<button class="btn1 red" onclick="alert('Просто вывод информации');">
+				Тест функции alert
+			</button>
+			<p>
+				Такое всплывающее окно очень удобно, так как оно позволяет быстро и
+				наглядно вывести нужную информацию для пользователя.
+				<br />
+				<br />
+				Функция confirm открывает всплывающее окно с определенным вопросом и
+				двумя кнопками: Ок и Отмена. Полученные данные из окна можно проверить в
+				условном операторе и в зависимости от них выполнить код.
+				<br />
+				<br />
+				Пример вызова окна:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_20.png" alt="" />
+			</div>
+			<button class="btn1 red" onclick="confirm('Вы согласны с confirm?');">
+				Тест функции confirm
+			</button>
+			<p>
+				Из минусов функции можно выделить не всегда красивый и подходящий дизайн
+				всплывающего окна. К нему нельзя добавить стили CSS, а значит и «придать
+				вид» не получиться.
+				<br />
+				<br />
+				Метод <b>prompt</b> получает информацию от пользователя. Полученные
+				данные можно поместить в переменную. <br />
+				<br />
+				Пример использования:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_21.png" alt="" />
+			</div>
+			<button class="btn1 red" onclick="prompt('Сколько вам лет?', 25);">
+				Тест функции prompt
+			</button>
+			<p>
+				В примере данные будут помещены в переменную <code>info</code>. После
+				получения данных с ними можно работать как с обычной переменной.
+			</p>
+		</div>
+	</body>
+</html>

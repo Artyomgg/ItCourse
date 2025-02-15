@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/hamburger.menu.css" />
+		<link rel="stylesheet" href="/css/toCOurse.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<title>JS 6</title>
+		<link
+			rel="icon"
+			href="/assets/img/free-icon-graduate-5404967.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<section class="top-nav">
+			<div class="block-logo">
+				<img src="/assets/img/free-icon-graduate-5404967.png" alt="" />
+				<h1>ItCourse</h1>
+			</div>
+			<input id="menu-toggle" type="checkbox" />
+			<label class="menu-button-container" for="menu-toggle">
+				<div class="menu-button"></div>
+			</label>
+			<ul class="menu">
+				<li class="active"><a href="/index.html">Главная</a></li>
+				<li><a href="/assets/courses.html">Курсы</a></li>
+			</ul>
+		</section>
+		<div class="conteiner">
+			<a href="/assets/home-page-js.html"
+				><div class="before">
+					<i class="bx bx-right-arrow-alt"></i></div
+			></a>
+			<h1 style="text-align: center">Условные операторы в языке JavaScript</h1>
+			<p>
+				Условные конструкции позволяют проверить некое выражение и в зависимости
+				от его результата выполнить необходимый код. В уроке мы познакомимся с
+				конструкцией «if - else» и конструкцией «switch - case».
+			</p>
+			<div class="block-video">
+				<h2>Видео урок</h2>
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/TE0S9G3C4vU?si=wP1AysCPzBLr1Wlb"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; 
+					autoplay; 
+					clipboard-write; 
+					encrypted-media; 
+					gyroscope; 
+					picture-in-picture; 
+					web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				>
+				</iframe>
+			</div>
+			<p>
+				Условные операторы очень важны, ведь они позволяют выполнять разный код
+				в зависимости от исхода условия. В языке JavaScript существует три
+				конструкции позволяющих осуществлять проверку.
+			</p>
+			<h2>Конструкция if - else</h2>
+			<p>
+				За счёт if else можно проверить одно или несколько условий и в случае их
+				успешной проверки будет выполнен один, иначе другой.
+				<br />
+				Рассмотрим пример:
+				<br />
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_6.png" alt="" />
+			</div>
+			<p>
+				Вы можете прописать структуру лишь с одним условием <code>if</code>, а
+				можете дописать в неё сколько-угодно вложенных условий
+				<code>else if</code>. <br />
+				<br />
+				Внутри каждого из условий можно прописывать другие конструкции if else,
+				что будут проверять новые выражения. <br />
+				<br />
+				Если необходимо проверить несколько условий в одном операторе, то можно
+				воспользоваться логическим «и» или же логическим «или»:
+			</p>
+
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_7.png" alt="" />
+			</div>
+
+			<h2>Конструкция switch</h2>
+			<p>
+				Конструкция <code>case</code> обладает более удобным форматом для
+				проверки множественных условий на совпадение значения. В конструкцию
+				записывается переменная, что проверяется, а также значения на которые
+				происходит проверка. <br />
+				Пример оператора:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_8.png" alt="" />
+			</div>
+			<h2>Тернарная операция</h2>
+			<p>
+				Это сокращенная форма <code>if else</code>. Записывается следующим
+				образом:
+			</p>
+			<div class="block-code">
+				<img src="/assets/img/course/js-img/Screenshot_10.png" alt="" />
+			</div>
+		</div>
+	</body>
+</html>
