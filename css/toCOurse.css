@@ -117,15 +117,19 @@ a {
 	width: 100%;
 	background: var(--darkColor);
 	color: var(--orangeColor);
-	padding: 10px;
+	padding: 20px;
 	border: 2px solid black;
 	border-radius: 20px;
 	margin-top: 10px;
 	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .conteiner ul li {
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .conteiner ul li::before {
@@ -162,8 +166,79 @@ a {
 	vertical-align: middle;
 }
 
-.conteiner{
+.conteiner {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
+}
+
+.block-exercise {
+	width: 100%;
+	background: var(--darkColor);
+	color: var(--orangeColor);
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin-top: 10px;
+	box-shadow: 1px 1px 6px black, -1px -1px 6px black;
+}
+
+.btn-generate {
+	width: 250px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: dodgerblue;
+	border: 2px solid black;
+	border-radius: 15px;
+	margin: 0 auto;
+	transition: 1s;
+	margin-top: 20px;
+}
+
+.btn-generate:hover {
+	background: #e06149;
+}
+
+.inn-js {
+	text-align: center;
+	padding: 10px;
+}
+
+.strelka {
+	background: purple;
+	width: 60px;
+	height: 60px;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	transition: 2s;
+	text-decoration: none;
+	color: black;
+}
+
+.strelka:hover {
+	background: black;
+	color: white;
+}
+
+@media screen and (max-width: 400px) {
+	.strelka {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.strelka {
+		width: 30px;
+		height: 30px;
+		font-size: 30px;
+	}
 }

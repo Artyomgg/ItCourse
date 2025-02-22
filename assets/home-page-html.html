@@ -69,28 +69,40 @@
 				этом все HTML обучение будет с нуля бесплатно.
 			</p>
 			<main>
-				<h2 style="text-align: center; margin-bottom: 10px">Уроки:</h2>
-				<ul>
-					<li>Введение в HTML</li>
-					<li>Файл «index.html». Отображение сайта</li>
-					<li>Как создаются сайты? Смотрим код чужого проекта</li>
-					<li>Комментарии в HTML. Метаданные «meta»</li>
-					<li>Теги для работы с текстом</li>
-					<li>Работа со списками</li>
-					<li>Что такое атрибуты в HTML?</li>
-					<li>Создание ссылок. Разные типы ссылок в HTML</li>
-					<li>Работа с изображениями</li>
-					<li>Создание HTML таблиц: ряды, столбцы, ячейки</li>
-					<li>Теги для подключения файлов</li>
-					<li>Теги «Div» и «Span»</li>
-					<li>Создание HTML форм и полей для ввода</li>
-					<li>Поле для ввода текста. Тег для создания кнопки</li>
-					<li>Селекторы выбора информации</li>
-					<li>Специальные HTML5 теги</li>
-					<li>Оптимизация под браузеры</li>
-					<li>Заключительная часть</li>
+				<ul class="one">
+					<li>Перейти к курсу</li>
 				</ul>
 			</main>
 		</div>
+		<div class="preloader">
+			<div
+				aria-label="Orange and tan hamster running in a metal wheel"
+				role="img"
+				class="wheel-and-hamster"
+			>
+				<div class="wheel"></div>
+				<div class="hamster">
+					<div class="hamster__body">
+						<div class="hamster__head">
+							<div class="hamster__ear"></div>
+							<div class="hamster__eye"></div>
+							<div class="hamster__nose"></div>
+						</div>
+						<div class="hamster__limb hamster__limb--fr"></div>
+						<div class="hamster__limb hamster__limb--fl"></div>
+						<div class="hamster__limb hamster__limb--br"></div>
+						<div class="hamster__limb hamster__limb--bl"></div>
+						<div class="hamster__tail"></div>
+					</div>
+				</div>
+				<div class="spoke"></div>
+			</div>
+		</div>
+		<script src="/assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('.one li')[0].addEventListener('click', () => {
+				window.location.href = '/assets/pages/html/2.html'
+			})
+		</script>
 	</body>
 </html>

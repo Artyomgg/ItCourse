@@ -64,19 +64,40 @@
 				понимание как можно сделать красивый веб сайт.
 			</p>
 			<main>
-				<h2 style="text-align: center; margin-bottom: 10px">Уроки:</h2>
-				<ul>
-					<li>Введение в CSS. Что это и как с ним работать?</li>
-					<li>Форматы подключения стилей</li>
-					<li>Селекторы для выборки элементов</li>
-					<li>Псевдоклассы и псевдоэлементы</li>
-					<li>Стили для текста</li>
-					<li>Стили для блоков</li>
-					<li>Позиционирование блоков</li>
-					<li>Работа со списками</li>
-					<li>Заключительная часть</li>
+				<ul class="one">
+					<li>Перейти к курсу</li>
 				</ul>
 			</main>
 		</div>
+		<div class="preloader">
+			<div
+				aria-label="Orange and tan hamster running in a metal wheel"
+				role="img"
+				class="wheel-and-hamster"
+			>
+				<div class="wheel"></div>
+				<div class="hamster">
+					<div class="hamster__body">
+						<div class="hamster__head">
+							<div class="hamster__ear"></div>
+							<div class="hamster__eye"></div>
+							<div class="hamster__nose"></div>
+						</div>
+						<div class="hamster__limb hamster__limb--fr"></div>
+						<div class="hamster__limb hamster__limb--fl"></div>
+						<div class="hamster__limb hamster__limb--br"></div>
+						<div class="hamster__limb hamster__limb--bl"></div>
+						<div class="hamster__tail"></div>
+					</div>
+				</div>
+				<div class="spoke"></div>
+			</div>
+		</div>
+		<script src="/assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('.one li')[0].addEventListener('click', () => {
+				window.location.href = '/assets/pages/css/2.html'
+			})
+		</script>
 	</body>
 </html>
