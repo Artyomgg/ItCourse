@@ -135,12 +135,24 @@
 				</div>
 			</div>
 		</section>
-		<div class="block-help">
-			<a href="https://t.me/+ZP746KoxXGE5ZTYy"
+		<div class="block-opros">
+			<h2>Пройдите опрос</h2>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeW1McdCk2MbIC5Hxtp2GsftnpPa1wBRu3tfXYplxVNojWSjg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		</div>
+		<footer>
+			<div class="block-logo">
+				<img src="/assets/img/free-icon-graduate-5404967.png" alt="" />
+				<h1>ItCourse</h1>
+			</div>
+			<h4>Copyright © 2025 Дудко Артем</h4>
+			<p>
+				Учитель-консультант - Бубкина Елена Петровна, ср. шк №30
+				<br>
+				<a href="https://t.me/+ZP746KoxXGE5ZTYy"
 				>Не можешь решить задачу. Переходи в сообщество!</a
 			>
-			<img src="/assets/img/free-icon-confusion-6770646.png" alt="" />
-		</div>
+			</p>
+		</footer>
 		<div class="preloader">
 			<div
 				aria-label="Orange and tan hamster running in a metal wheel"
@@ -166,5 +178,30 @@
 			</div>
 		</div>
 		<script src="/assets/js/main.js"></script>
+		<script>
+			 function DataTimer() {
+					const block_opros = document.querySelector('.block-opros')
+					function checkEvent(eventDate) {
+						// Получаем текущую дату
+						const today = new Date()
+						today.setHours(0, 0, 0, 0) // Убираем время, чтобы сравнивать только 	даты
+
+						// Преобразуем входную дату в объект Date
+						const eventDateObj = new Date(eventDate)
+						eventDateObj.setHours(0, 0, 0, 0) // Убираем время
+
+						// Сравниваем даты
+						if (today.getTime() === eventDateObj.getTime()) {
+							console.log('Событие произошло сегодня!')
+							block_opros.style.display = 'none'
+						} 
+					}
+
+					// Пример использования
+					const eventDate = '2025-03-20' // Укажите дату события в формате 	YYYY-MM-DD
+					checkEvent(eventDate)
+				}
+			DataTimer()
+		</script>
 	</body>
 </html>
