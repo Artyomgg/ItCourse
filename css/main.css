@@ -939,7 +939,7 @@ footer{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: spc 3s linear forwards 2s;
+	animation: spc 2s linear forwards 2s;
 }
 
 .splash-screen img{
