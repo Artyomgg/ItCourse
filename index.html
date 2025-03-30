@@ -229,55 +229,9 @@
 				<a href="assets/mail/mail.html">Вопросы по сайту, предложения?</a>
 			</p>
 		</footer>
-		<div class="preloader">
-			<div
-				aria-label="Orange and tan hamster running in a metal wheel"
-				role="img"
-				class="wheel-and-hamster"
-			>
-				<div class="wheel"></div>
-				<div class="hamster">
-					<div class="hamster__body">
-						<div class="hamster__head">
-							<div class="hamster__ear"></div>
-							<div class="hamster__eye"></div>
-							<div class="hamster__nose"></div>
-						</div>
-						<div class="hamster__limb hamster__limb--fr"></div>
-						<div class="hamster__limb hamster__limb--fl"></div>
-						<div class="hamster__limb hamster__limb--br"></div>
-						<div class="hamster__limb hamster__limb--bl"></div>
-						<div class="hamster__tail"></div>
-					</div>
-				</div>
-				<div class="spoke"></div>
-			</div>
+		<div class="splash-screen">
+			<img src="assets/img/free-icon-graduate-5404967.png" alt="">
 		</div>
 		<script src="/assets/js/main.js"></script>
-		<script>
-			function DataTimer() {
-				const block_opros = document.querySelector('.block-opros')
-				function checkEvent(eventDate) {
-					// Получаем текущую дату
-					const today = new Date()
-					today.setHours(0, 0, 0, 0) // Убираем время, чтобы сравнивать только 	даты
-
-					// Преобразуем входную дату в объект Date
-					const eventDateObj = new Date(eventDate)
-					eventDateObj.setHours(0, 0, 0, 0) // Убираем время
-
-					// Сравниваем даты
-					if (today.getTime() === eventDateObj.getTime()) {
-						console.log('Событие произошло сегодня!')
-						block_opros.style.display = 'none'
-					}
-				}
-
-				// Пример использования
-				const eventDate = '2025-03-20' // Укажите дату события в формате 	YYYY-MM-DD
-				checkEvent(eventDate)
-			}
-			DataTimer()
-		</script>
 	</body>
 </html>

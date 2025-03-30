@@ -261,6 +261,7 @@ ul {
 	display: flex;
 	gap: 20px;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 }
 
@@ -921,4 +922,33 @@ footer{
 
 .big {
 	height: 500px;
+}
+
+.not-big{
+	height: 420px;
+}
+
+
+.splash-screen{
+	background: white;
+	position: fixed;
+	z-index: 1000000;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: spc 3s linear forwards 2s;
+}
+
+.splash-screen img{
+	width: 50%;
+}
+
+@keyframes spc {
+	100%{
+		opacity: 0;
+		display: none;
+	}
 }
