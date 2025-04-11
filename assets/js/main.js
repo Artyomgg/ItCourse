@@ -1,4 +1,4 @@
-// window.location.href = 'https://artyomgg.github.io/site-was-blocked/'
+window.location.href = 'https://artyomgg.github.io/site-was-blocked/'
 
 let preloader = document.querySelector('.preloader')
 
