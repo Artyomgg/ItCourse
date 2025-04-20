@@ -946,6 +946,10 @@ footer{
 	width: 30%;
 }
 
+.paskha{
+	width: 40px;
+}
+
 @keyframes spc {
 	100%{
 		opacity: 0;
