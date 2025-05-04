@@ -13,7 +13,7 @@ function JavaScript(props) {
 				<div className='home-of-course'>
 					<h3>Уроки JavaScript для начинающих</h3>
 					<img
-						src='/src/assets/img/course/js-img/x1476977754.jpg.pagespeed.ic.9i3S0NDgd7.webp'
+						src='/img/course/js-img/x1476977754.jpg.pagespeed.ic.9i3S0NDgd7.webp'
 						alt='JavaScript preview'
 						className='preview-img'
 					/>
@@ -46,14 +46,10 @@ function JavaScript(props) {
 								<Link to='1'>Введение в язык JS. Что к чему?</Link>
 							</li>
 							<li>
-								<Link to='2'>
-									Основные моменты при работе с JavaScript
-								</Link>
+								<Link to='2'>Основные моменты при работе с JavaScript</Link>
 							</li>
 							<li>
-								<Link to='3'>
-									Вывод информации. Работа с консолью
-								</Link>
+								<Link to='3'>Вывод информации. Работа с консолью</Link>
 							</li>
 							<li>
 								<Link to='4'>Переменные и типы данных в JS</Link>
@@ -64,9 +60,7 @@ function JavaScript(props) {
 								</Link>
 							</li>
 							<li>
-								<Link to='6'>
-									Условные операторы в языке JavaScript
-								</Link>
+								<Link to='6'>Условные операторы в языке JavaScript</Link>
 							</li>
 							<li>
 								<Link to='7'>
@@ -74,22 +68,16 @@ function JavaScript(props) {
 								</Link>
 							</li>
 							<li>
-								<Link to='8'>
-									Циклы в JavaScript. Операторы циклов
-								</Link>
+								<Link to='8'>Циклы в JavaScript. Операторы циклов</Link>
 							</li>
 							<li>
-								<Link to='9'>
-									Всплывающие окна (alert, prompt, confirm)
-								</Link>
+								<Link to='9'>Всплывающие окна (alert, prompt, confirm)</Link>
 							</li>
 							<li>
 								<Link to='10'>Функции в языке JavaScript</Link>
 							</li>
 							<li>
-								<Link to='11'>
-									События и обработчик событий в JavaScript
-								</Link>
+								<Link to='11'>События и обработчик событий в JavaScript</Link>
 							</li>
 							<li>
 								<Link to='12'>
@@ -100,14 +88,10 @@ function JavaScript(props) {
 								<Link to='13'>Создание таймеров и интервалов</Link>
 							</li>
 							<li>
-								<Link to='14'>
-									Создание объектов. Встроенные функции
-								</Link>
+								<Link to='14'>Создание объектов. Встроенные функции</Link>
 							</li>
 							<li>
-								<Link to='15'>
-									Заключительный урок по JavaScript
-								</Link>
+								<Link to='15'>Заключительный урок по JavaScript</Link>
 							</li>
 						</ul>
 					</main>

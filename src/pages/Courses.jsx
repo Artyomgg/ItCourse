@@ -8,10 +8,7 @@ function Courses() {
 				<h2>Все курсы</h2>
 				<div className='card-conteiner'>
 					<div className='card big'>
-						<img
-							src='/src/assets/img/course/icons8-javascript.gif'
-							alt='JavaScript'
-						/>
+						<img src='/img/course/icons8-javascript.gif' alt='JavaScript' />
 						<h2>Курс по JS</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -58,7 +55,7 @@ function Courses() {
 					</div>
 
 					<div className='card big'>
-						<img src='/src/assets/img/course/icons8-react.gif' alt='React' />
+						<img src='/img/course/icons8-react.gif' alt='React' />
 						<h2>Курс по React JS за 4 часа</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -79,10 +76,7 @@ function Courses() {
 					</div>
 
 					<div className='card big'>
-						<img
-							src='/src/assets/img/course/icons8-react-native.gif'
-							alt='React Native'
-						/>
+						<img src='/img/course/icons8-react-native.gif' alt='React Native' />
 						<h2>Курс по React Native</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -101,7 +95,7 @@ function Courses() {
 					</div>
 
 					<div className='card not-big'>
-						<img src='/src/assets/img/course/icons8-питон.gif' alt='Python' />
+						<img src='/img/course/icons8-питон.gif' alt='Python' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -122,7 +116,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img src='/src/assets/img/course/icons8-питон.gif' alt='Python' />
+						<img src='/img/course/icons8-питон.gif' alt='Python' />
 						<h2>Курс Python-kids</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -140,7 +134,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img src='/src/assets/img/course/icons8-html.gif' alt='HTML' />
+						<img src='/img/course/icons8-html.gif' alt='HTML' />
 						<h2>Курс по HTML</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -160,7 +154,7 @@ function Courses() {
 
 					<div className='card big'>
 						<img
-							src='/src/assets/img/course/icons8-css3-48.png'
+							src='/img/course/icons8-css3-48.png'
 							alt='CSS'
 							className='animated-icon'
 						/>
@@ -183,7 +177,7 @@ function Courses() {
 
 					<div className='card'>
 						<img
-							src='/src/assets/img/course/icons8-visual-studio-code-48.png'
+							src='/img/course/icons8-visual-studio-code-48.png'
 							alt='VS Code'
 							className='animated-icon'
 						/>
@@ -197,10 +191,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img
-							src='/src/assets/img/course/icons8-photoshop.gif'
-							alt='Photoshop'
-						/>
+						<img src='/img/course/icons8-photoshop.gif' alt='Photoshop' />
 						<h2>Полный курс по Photoshop</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим Photoshop</h4>

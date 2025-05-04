@@ -53,14 +53,14 @@ function Eleven() {
 					<br />
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_26.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_26.png' alt='' />
 				</div>
 				<p>
 					При двойном нажатии будет вызываться функция
 					<code> testFunction </code>. Осталось лишь добавить саму функцию:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_27.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_27.png' alt='' />
 				</div>
 				<p>
 					Вы также можете передать неограниченное количество параметров в саму

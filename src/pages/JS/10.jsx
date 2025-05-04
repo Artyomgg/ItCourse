@@ -62,7 +62,7 @@ function Ten() {
 					На основе всех данных наша функция будет выглядеть следующим образом:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_23.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_23.png' alt='' />
 				</div>
 				<p>
 					Функция выше не принимает никаких параметров и ничего не возвращает.
@@ -70,7 +70,7 @@ function Ten() {
 					добавим параметр:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_24.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_24.png' alt='' />
 				</div>
 				<p>
 					Теперь функция принимает параметр, который будет отображен в консоли.
@@ -80,7 +80,7 @@ function Ten() {
 					слово <code>return</code>:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_25.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_25.png' alt='' />
 				</div>
 				<h2>Локальные и глобальные переменные</h2>
 				<p>

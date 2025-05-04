@@ -47,7 +47,7 @@ function Fourteen() {
 					следующую конструкцию:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_32.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_32.png' alt='' />
 				</div>
 				<p>
 					Далее через объект <code>time_date</code> вы можете обращаться ко всем
@@ -63,7 +63,7 @@ function Fourteen() {
 					Пример вывода элемента из строки:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_33.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_33.png' alt='' />
 				</div>
 				<p>
 					Также мы можем искать символы в строке или же возводить все символы в

@@ -50,14 +50,14 @@ function Thirteen() {
 					Для создания интервалов используйте конструкцию:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_29.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_29.png' alt='' />
 				</div>
 				<p>
 					Чтобы остановить интервал его необходимо записать в переменную, после
 					чего очистить данные:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_30.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_30.png' alt='' />
 				</div>
 				<h2>Использование таймеров</h2>
 				<p>
@@ -65,7 +65,7 @@ function Thirteen() {
 					они срабатывают лишь один раз:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_31.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_31.png' alt='' />
 				</div>
 				<p>
 					За счёт этих функций вы можете откладывать выполнение других функций

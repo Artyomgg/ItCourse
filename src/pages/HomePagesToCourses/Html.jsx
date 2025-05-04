@@ -60,7 +60,7 @@ function Html(props) {
 					<br />
 					3. Страница должна содержать следующие элементы:
 					<img
-						src='/public/img/course/code/image.png'
+						src='/img/course/code/image.png'
 						alt=''
 						style={{ width: '70%' }}
 					/>

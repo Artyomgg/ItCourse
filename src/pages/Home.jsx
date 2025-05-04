@@ -27,7 +27,7 @@ function Home() {
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
 					<div className='card not-big'>
-						<img alt='' src='/src/assets/img/course/icons8-питон.gif' />
+						<img alt='' src='/img/course/icons8-питон.gif' />
 						<h2>Курс Python-kids</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -48,7 +48,7 @@ function Home() {
 						</a>
 					</div>
 					<div className='card not-big'>
-						<img alt='' src='/src/assets/img/course/icons8-питон.gif' />
+						<img alt='' src='/img/course/icons8-питон.gif' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -76,7 +76,7 @@ function Home() {
 						</Link>
 					</div>
 					<div className='card big'>
-						<img alt='' src='/src/assets/img/course/icons8-javascript.gif' />
+						<img alt='' src='/img/course/icons8-javascript.gif' />
 						<h2>Курс по JS</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -105,7 +105,7 @@ function Home() {
 						</Link>
 					</div>
 					<div className='card'>
-						<img alt='' src='/src/assets/img/course/icons8-html.gif' />
+						<img alt='' src='/img/course/icons8-html.gif' />
 						<h2>Курс по HTML</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -152,7 +152,7 @@ function Home() {
 				/>
 			</div>
 			<div className='splash-screen'>
-				<img alt='' src='/src/assets/img/free-icon-graduate-5404967.png' />
+				<img alt='' src='/img/free-icon-graduate-5404967.png' />
 			</div>
 		</>
 	)

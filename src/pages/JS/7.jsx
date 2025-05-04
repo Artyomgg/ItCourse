@@ -55,7 +55,7 @@ function Seven() {
 					Примеры создания массива:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_11.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_11.png' alt='' />
 				</div>
 				<p>
 					Работать с элементами массива можно точно как с переменными. Мы можем
@@ -70,7 +70,7 @@ function Seven() {
 					Пример метода:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_12.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_12.png' alt='' />
 				</div>
 				<p>
 					Сперва массивы могут показаться бесполезными, но на самом деле это не
@@ -92,7 +92,7 @@ function Seven() {
 					матрица, а записывается следующим образом:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_13.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_13.png' alt='' />
 				</div>
 				<p>
 					Мы видим, что элементы первого массива являются другими массивами.
@@ -101,7 +101,7 @@ function Seven() {
 					массива, так и второго:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_14.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_14.png' alt='' />
 				</div>
 			</div>
 		</>

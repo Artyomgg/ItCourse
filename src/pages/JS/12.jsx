@@ -49,7 +49,7 @@ function Twelve() {
 					Для нахождения полей можно использовать их идентификаторы:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_28.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_28.png' alt='' />
 				</div>
 				<p>
 					При помощи условий вы можете проверять все поля и в случае их

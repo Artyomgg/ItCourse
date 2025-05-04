@@ -62,7 +62,7 @@ function Nine() {
 					разукрасить их.
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_19.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_19.png' alt='' />
 				</div>
 				<button
 					className='btn1 red'
@@ -83,7 +83,7 @@ function Nine() {
 					Пример вызова окна:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_20.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_20.png' alt='' />
 				</div>
 				<button
 					className='btn1 red'
@@ -103,7 +103,7 @@ function Nine() {
 					Пример использования:
 				</p>
 				<div className='block-code'>
-					<img src='/src/assets/img/course/js-img/Screenshot_21.png' alt='' />
+					<img src='/img/course/js-img/Screenshot_21.png' alt='' />
 				</div>
 				<button
 					className='btn1 red'

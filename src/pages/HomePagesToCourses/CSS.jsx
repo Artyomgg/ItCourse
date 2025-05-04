@@ -72,7 +72,7 @@ function CSS(props) {
 						</b>
 					</p>
 					<img
-						src='/public/img/course/code/unknown.png'
+						src='/img/course/code/unknown.png'
 						alt=''
 						style={{ width: '70%' }}
 					/>

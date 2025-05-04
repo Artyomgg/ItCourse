@@ -51,7 +51,7 @@ function Six() {
 				</div>
 				<div className='block-code'>
 					<img
-						src='/src/assets/img/course/js-img/Screenshot_10.png'
+						src='/img/course/js-img/Screenshot_10.png'
 						alt='Пример тернарного оператора'
 					/>
 				</div>
