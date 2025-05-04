@@ -27,7 +27,7 @@ function Home() {
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
 					<div className='card not-big'>
-						<img alt='' src='/public/img/course/icons8-питон.gif' />
+						<img alt='' src='/src/assets/img/course/icons8-питон.gif' />
 						<h2>Курс Python-kids</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -36,7 +36,6 @@ function Home() {
 							</ol>
 							<h4
 								style={{
-									fontSize: '15px',
 									marginTop: '5px',
 								}}
 							>
@@ -49,7 +48,7 @@ function Home() {
 						</a>
 					</div>
 					<div className='card not-big'>
-						<img alt='' src='/public/img/course/icons8-питон.gif' />
+						<img alt='' src='/src/assets/img/course/icons8-питон.gif' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -58,7 +57,6 @@ function Home() {
 							</ol>
 							<h4
 								style={{
-									fontSize: '15px',
 									marginTop: '5px',
 								}}
 							>
@@ -66,7 +64,6 @@ function Home() {
 							</h4>
 							<h4
 								style={{
-									fontSize: '15px',
 									marginTop: '5px',
 								}}
 							>
@@ -79,7 +76,7 @@ function Home() {
 						</Link>
 					</div>
 					<div className='card big'>
-						<img alt='' src='/public/img/course/icons8-javascript.gif' />
+						<img alt='' src='/src/assets/img/course/icons8-javascript.gif' />
 						<h2>Курс по JS</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -89,20 +86,18 @@ function Home() {
 							</ol>
 							<h4
 								style={{
-									fontSize: '15px',
-									marginTop: '10px',
+									marginTop: '5px',
 								}}
 							>
 								Подходит для новичков и более опытных
 							</h4>
-						<h4
-							style={{
-								fontSize: '15px',
-								marginTop: '5px',
-							}}
-						>
-							Особенность курса: Надо знать HTML и CSS
-						</h4>
+							<h4
+								style={{
+									marginTop: '5px',
+								}}
+							>
+								Особенность курса: Надо знать HTML и CSS
+							</h4>
 							<h5>Сложность: ★ ★ ★</h5>
 						</div>
 						<Link className='a-btn' to='courses/js'>
@@ -110,7 +105,7 @@ function Home() {
 						</Link>
 					</div>
 					<div className='card'>
-						<img alt='' src='/public/img/course/icons8-html.gif' />
+						<img alt='' src='/src/assets/img/course/icons8-html.gif' />
 						<h2>Курс по HTML</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -119,7 +114,6 @@ function Home() {
 							</ol>
 							<h4
 								style={{
-									fontSize: '15px',
 									marginTop: '5px',
 								}}
 							>
@@ -127,7 +121,6 @@ function Home() {
 							</h4>
 							<h4
 								style={{
-									fontSize: '15px',
 									marginTop: '5px',
 								}}
 							>
@@ -159,9 +152,8 @@ function Home() {
 				/>
 			</div>
 			<div className='splash-screen'>
-				<img alt='' src='/public/img/free-icon-graduate-5404967.png' />
+				<img alt='' src='/src/assets/img/free-icon-graduate-5404967.png' />
 			</div>
-			<script src='/assets/js/main.js' />
 		</>
 	)
 }

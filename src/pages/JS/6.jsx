@@ -33,25 +33,25 @@ function Six() {
 				</p>
 				<div className='block-code'>
 					<img
-						src='/public/img/course/js-img/Screenshot_6.png'
+						src='/src/assets/img/course/js-img/Screenshot_6.png'
 						alt='Пример кода if-else'
 					/>
 				</div>
 				<div className='block-code'>
 					<img
-						src='/public/img/course/js-img/Screenshot_7.png'
+						src='/src/assets/img/course/js-img/Screenshot_7.png'
 						alt='Пример логических операторов'
 					/>
 				</div>
 				<div className='block-code'>
 					<img
-						src='/public/img/course/js-img/Screenshot_8.png'
+						src='/src/assets/img/course/js-img/Screenshot_8.png'
 						alt='Пример switch-case'
 					/>
 				</div>
 				<div className='block-code'>
 					<img
-						src='/public/img/course/js-img/Screenshot_10.png'
+						src='/src/assets/img/course/js-img/Screenshot_10.png'
 						alt='Пример тернарного оператора'
 					/>
 				</div>

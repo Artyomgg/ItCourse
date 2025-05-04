@@ -50,7 +50,7 @@ function Eight() {
 					выглядит следующим образом:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_15.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_15.png' alt='' />
 				</div>
 				<p>
 					В объявлении цикла записывается следующее: переменная цикла, её
@@ -68,7 +68,7 @@ function Eight() {
 					параметры записываются вне цикла:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_17.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_17.png' alt='' />
 				</div>
 				<h2>Цикл Do While</h2>
 				<p>
@@ -78,7 +78,7 @@ function Eight() {
 					будет выполняться дальше:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_18.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_18.png' alt='' />
 				</div>
 				<p>
 					Как видно из примера, цикл изначально неверный, но это не мешает ему

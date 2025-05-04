@@ -13,7 +13,7 @@ function JavaScript(props) {
 				<div className='home-of-course'>
 					<h3>Уроки JavaScript для начинающих</h3>
 					<img
-						src='/public/img/course/js-img/x1476977754.jpg.pagespeed.ic.9i3S0NDgd7.webp'
+						src='/src/assets/img/course/js-img/x1476977754.jpg.pagespeed.ic.9i3S0NDgd7.webp'
 						alt='JavaScript preview'
 						className='preview-img'
 					/>

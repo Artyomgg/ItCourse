@@ -27,12 +27,12 @@ function Seven() {
 						title='YouTube video player'
 						frameBorder='0'
 						allow='accelerometer; 
-      			autoplay; 
-      			clipboard-write; 
-      			encrypted-media; 
-      			gyroscope; 
-      			picture-in-picture; 
-      			web-share'
+      autoplay; 
+      clipboard-write; 
+      encrypted-media; 
+      gyroscope; 
+      picture-in-picture; 
+      web-share'
 						referrerPolicy='strict-origin-when-cross-origin'
 						allowFullScreen
 					></iframe>
@@ -55,7 +55,7 @@ function Seven() {
 					Примеры создания массива:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_11.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_11.png' alt='' />
 				</div>
 				<p>
 					Работать с элементами массива можно точно как с переменными. Мы можем
@@ -70,7 +70,7 @@ function Seven() {
 					Пример метода:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_12.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_12.png' alt='' />
 				</div>
 				<p>
 					Сперва массивы могут показаться бесполезными, но на самом деле это не
@@ -82,7 +82,7 @@ function Seven() {
 					другим массивом. На практике очень редко используются массивы с более
 					чем третим уровнем вложенности. То есть массивы, в которых все
 					элементы являются другими массивами и в котором все элементы также
-					другие массивы встречаются очень и очень редко на практике. <br />{' '}
+					другие массивы встречаются очень и очень редко на практике. <br />
 					<br />
 					Мы не будем изучать подобные массивы, так как принцип их построения
 					точно такой же как при работе с двумерными массивами.
@@ -92,7 +92,7 @@ function Seven() {
 					матрица, а записывается следующим образом:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_13.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_13.png' alt='' />
 				</div>
 				<p>
 					Мы видим, что элементы первого массива являются другими массивами.
@@ -101,7 +101,7 @@ function Seven() {
 					массива, так и второго:
 				</p>
 				<div className='block-code'>
-					<img src='/public/img/course/js-img/Screenshot_14.png' alt='' />
+					<img src='/src/assets/img/course/js-img/Screenshot_14.png' alt='' />
 				</div>
 			</div>
 		</>
