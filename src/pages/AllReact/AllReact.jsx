@@ -5,7 +5,7 @@ function AllReact(props) {
 	return (
 		<>
 			<div className='conteiner'>
-				<Link href='/courses/react'>
+				<Link to='/courses/react'>
 					<div className='before'>
 						<i className='bx bx-right-arrow-alt'></i>
 					</div>
