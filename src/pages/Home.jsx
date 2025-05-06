@@ -152,7 +152,7 @@ function Home() {
 				/>
 			</div>
 			<div className='splash-screen'>
-				<img alt='' src='/img/free-icon-graduate-5404967.png' />
+				<img alt='' src='\assets\free-icon-graduate-5404967withoneelement-DI7Mz8YI.png' />
 			</div>
 		</>
 	)

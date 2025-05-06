@@ -6,7 +6,10 @@ function Header() {
 	return (
 		<section className='top-nav'>
 			<div className='block-logo'>
-				<img alt='' src='./img/free-icon-graduate-5404967withoneelement.png' />
+				<img
+					alt=''
+					src='./public/free-icon-graduate-5404967withoneelement.png'
+				/>
 				<h1>ItCourse</h1>
 			</div>
 			<input id='menu-toggle' type='checkbox' />
