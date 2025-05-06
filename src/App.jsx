@@ -8,6 +8,7 @@ import NodeJsAll from './pages/AllNodeJSLessons/nodejs'
 import PythonAll from './pages/AllPython/PythonAll'
 import AllReact from './pages/AllReact/AllReact'
 import ReactNativeAll from './pages/AllReactNative/ReactNativeAll'
+import CheckExercises from './pages/CheckExercises'
 import Courses from './pages/Courses'
 import CSSALL from './pages/CSSALL/CSSALL'
 import Home from './pages/Home'
@@ -35,7 +36,7 @@ import Six from './pages/JS/6'
 import Seven from './pages/JS/7'
 import Eight from './pages/JS/8'
 import Nine from './pages/JS/9'
-import CheckExercises from './pages/CheckExercises'
+import NineThOfMay from './pages/NineThOfMay'
 
 const App = () => {
 	return (
@@ -88,6 +89,7 @@ const App = () => {
 					<Route path='courses/vscode' element={<Vscode />}></Route>
 					<Route path='courses/photoshop' element={<Photoshop />}></Route>
 					<Route path='check' element={<CheckExercises />}></Route>
+					<Route path='9may' element={<NineThOfMay/>}></Route>
 				</Routes>
 				<Footer></Footer>
 			</R>

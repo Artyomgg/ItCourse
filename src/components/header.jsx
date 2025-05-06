@@ -29,6 +29,9 @@ function Header() {
 				<li>
 					<a href='https://chart-beryl.vercel.app/'>Таблица лидеров</a>
 				</li>
+				<li>
+					<Link to='/9may'>9 Мая</Link>
+				</li>
 			</ul>
 		</section>
 	)
