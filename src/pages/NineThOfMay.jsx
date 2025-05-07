@@ -64,11 +64,7 @@ function NineThOfMay(props) {
 						{eventStarted ? (
 							<>
 								<p>Событие началось! Выполняйте задания и получайте награды!</p>
-								{/* <div className='tasks-container'>
-									<div className='task'>Задание 1: Викторина о ВОВ</div>
-									<div className='task'>Задание 2: Рассказ о ветеране</div>
-									<div className='task'>Задание 3: Посещение памятника</div>
-								</div> */}
+								<Event></Event>
 								<p className='event-end'>Конец события - 20 мая! Успейте!</p>
 							</>
 						) : (

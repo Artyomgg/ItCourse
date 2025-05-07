@@ -37,6 +37,7 @@ import Seven from './pages/JS/7'
 import Eight from './pages/JS/8'
 import Nine from './pages/JS/9'
 import NineThOfMay from './pages/NineThOfMay'
+import { OneNineMay } from './components/NineOfMAy/Event'
 
 const App = () => {
 	return (
@@ -90,6 +91,7 @@ const App = () => {
 					<Route path='courses/photoshop' element={<Photoshop />}></Route>
 					<Route path='check' element={<CheckExercises />}></Route>
 					<Route path='9may' element={<NineThOfMay/>}></Route>
+					<Route path='9may/one' element={<OneNineMay/>}></Route>
 				</Routes>
 				<Footer></Footer>
 			</R>
