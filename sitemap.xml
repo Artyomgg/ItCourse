@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
+  <url>
+    <loc>https://it-course-six.vercel.app/</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Курсы -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+	<!-- Курс по JS -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/js</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по nodejs -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/nodejs</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по react -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/react</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по reactnative -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/reactnative</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по python -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/python</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по html -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/html</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+
+	<!-- Курс по CSS -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/css</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по VSCODE -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/vscode</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- Курс по photoshop -->
+  <url>
+    <loc>https://it-course-six.vercel.app/courses/photoshop</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+	<!-- //9 Мая -->
+  <url>
+    <loc>https://it-course-six.vercel.app/9may</loc>
+    <lastmod>2025-05-08</lastmod>
+    <priority>0.5</priority>
+  </url>
+</urlset>
