@@ -3,6 +3,10 @@ import React from 'react'
 function CheckExercises(props) {
 	return (
 		<>
+			<head>
+				<title>Проверить задания | IT Course</title>
+				<meta name='description' content='Проверить задания на ItCourse' />
+			</head>
 			<div
 				className='check'
 				style={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}

@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 function NodeJs() {
 	return (
 		<>
+			<head>
+				<title>Курс по NodeJS | IT Course</title>
+				<meta name='description' content='Курс по NodeJS' />
+			</head>
 			<h1 style={{ textAlign: 'center' }}>NODE JS</h1>
 			<div className='home-of-course'>
 				<h3>Уроки Node JS</h3>
@@ -86,7 +90,9 @@ function NodeJs() {
 				<main>
 					<h2 style={{ textAlign: 'center' }}>Уроки:</h2>
 					<ul className='one'>
-						<li><Link to="nodejslessons">Перейти к курсу</Link></li>
+						<li>
+							<Link to='nodejslessons'>Перейти к курсу</Link>
+						</li>
 					</ul>
 				</main>
 			</div>

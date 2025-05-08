@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 function CSS(props) {
 	return (
 		<>
+			<head>
+				<title>Курс по CSS | IT Course</title>
+				<meta name='description' content='Курс по CSS' />
+			</head>
 			<h1 style={{ textAlign: 'center' }}>CSS</h1>
 			<div className='home-of-course'>
 				<h3>Уроки CSS для начинающих</h3>

@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 function Courses() {
 	return (
 		<>
+			<head>
+				<title>Курсы | IT Course</title>
+				<meta name='description' content='Страница курсов' />
+			</head>
 			<section id='courses'>
 				<h2>Все курсы</h2>
 				<div className='card-conteiner'>

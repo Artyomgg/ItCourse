@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 function Home() {
 	return (
 		<>
+			<head>
+				<title>Главная | IT Course</title>
+				<meta name='description' content='Главная страница' />
+			</head>
 			<section id='hello'>
 				<div className='block-help-color'>
 					<h1>Изучай HTML, CSS, JS и Python с нуля!</h1>
@@ -152,7 +156,10 @@ function Home() {
 				/>
 			</div>
 			<div className='splash-screen'>
-				<img alt='' src='\assets\free-icon-graduate-5404967withoneelement-DI7Mz8YI.png' />
+				<img
+					alt=''
+					src='\assets\free-icon-graduate-5404967withoneelement-DI7Mz8YI.png'
+				/>
 			</div>
 		</>
 	)
