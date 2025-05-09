@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-import { Event } from '../components/'
+import { Event } from '../components/NineOfMAy/Event'
 
 
 function NineThOfMay(props) {
