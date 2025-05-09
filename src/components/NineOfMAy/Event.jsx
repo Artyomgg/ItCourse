@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-function Event() {
+export function Event() {
 	return (
 		<>
 			<Link to='one'>
@@ -37,8 +37,6 @@ function Event() {
 		</>
 	)
 }
-
-export default Event
 
 const storageKey = 'correctAnswers' // Ключ для localStorage
 
