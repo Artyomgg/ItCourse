@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Event } from '../components/NineOfMAy/Event'
 
-
-
 function NineThOfMay(props) {
 	const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 	const [eventStarted, setEventStarted] = useState(false)
