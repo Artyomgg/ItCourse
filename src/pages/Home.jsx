@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../components/Tank'
 
 function Home() {
 	return (
@@ -142,6 +142,8 @@ function Home() {
 				style={{
 					display: 'flex',
 					justifyContent: 'center',
+					alignItems: 'center',
+					flexDirection: 'column',
 					marginTop: '20px',
 				}}
 			>
@@ -154,6 +156,7 @@ function Home() {
 					title='YouTube video player'
 					width='560'
 				/>
+				<Tank tankId='1' />
 			</div>
 			<div className='splash-screen'>
 				<img

@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../../components/Tank'
 
 function Python() {
 	return (
@@ -80,6 +80,9 @@ function Python() {
 					<ul className='one'>
 						<li>
 							<Link to='python'>Перейти к курсу</Link>
+						</li>
+						<li>
+							<Tank tankId='6' />
 						</li>
 					</ul>
 				</main>

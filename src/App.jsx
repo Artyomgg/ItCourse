@@ -37,7 +37,7 @@ import Seven from './pages/JS/7'
 import Eight from './pages/JS/8'
 import Nine from './pages/JS/9'
 import NineThOfMay from './pages/NineThOfMay'
-import { OneNineMay } from './components/NineOfMAy/Event'
+import LastQuestion, { EightNineMay, FiveNineMay, FourNineMay, NineNineMay, OneNineMay, SevenNineMay, SixNineMay, TwoNineMay, ThreeNineMay } from './components/NineOfMAy/Event'
 
 const App = () => {
 	return (
@@ -92,6 +92,16 @@ const App = () => {
 					<Route path='check' element={<CheckExercises />}></Route>
 					<Route path='9may' element={<NineThOfMay/>}></Route>
 					<Route path='9may/one' element={<OneNineMay/>}></Route>
+					<Route path='9may/two' element={<TwoNineMay/>}></Route>
+					<Route path='9may/three' element={<ThreeNineMay/>}></Route>
+					<Route path='9may/four' element={<FourNineMay/>}></Route>
+					<Route path='9may/five' element={<FiveNineMay/>}></Route>
+					<Route path='9may/six' element={<SixNineMay/>}></Route>
+					<Route path='9may/seven' element={<SevenNineMay/>}></Route>
+					<Route path='9may/eight' element={<EightNineMay/>}></Route>
+					<Route path='9may/nine' element={<NineNineMay/>}></Route>
+					<Route path='9may/ten' element={<LastQuestion/>}></Route>
+					
 				</Routes>
 				<Footer></Footer>
 			</R>

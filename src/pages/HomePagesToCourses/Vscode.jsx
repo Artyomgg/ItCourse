@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tank } from '../../components/Tank'
 
 function Vscode(props) {
 	return (
@@ -41,6 +42,7 @@ function Vscode(props) {
 					</li>
 					<li>
 						<h4>2. Установка на macOS</h4>
+						<Tank tankId='10' />
 						<h5>
 							Скачать
 							<a

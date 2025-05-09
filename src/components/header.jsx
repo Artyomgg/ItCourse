@@ -8,7 +8,7 @@ function Header() {
 			<div className='block-logo'>
 				<img
 					alt=''
-					src='\assets\free-icon-graduate-5404967withoneelement-DI7Mz8YI.png'
+					src='/img/free-icon-graduate-5404967withoneelement.png'
 				/>
 				<h1>ItCourse</h1>
 			</div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../../components/Tank'
 
 function NodeJsAll(props) {
 	return (
@@ -103,6 +104,7 @@ function NodeJsAll(props) {
 				</section>
 				<section id='four'>
 					<h2>Работа с модулями. Создание модуля</h2>
+					<Tank tankId='8' />
 					<div className='block-video'>
 						<iframe
 							width='560'

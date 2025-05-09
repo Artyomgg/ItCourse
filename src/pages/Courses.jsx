@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../components/Tank'
 
 function Courses() {
 	return (
@@ -205,6 +205,7 @@ function Courses() {
 						</Link>
 					</div>
 				</div>
+				<Tank tankId='4' />
 			</section>
 		</>
 	)

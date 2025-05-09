@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../../components/Tank'
 
 function HtmlAll(props) {
 	return (
@@ -10,6 +10,7 @@ function HtmlAll(props) {
 						<i className='bx bx-right-arrow-alt'></i>
 					</div>
 				</Link>
+				<Tank tankId='9' />
 				<section id='start'></section>
 				<h1 style={{ textAlign: 'center' }}>Все уроки HTML</h1>
 				<main>

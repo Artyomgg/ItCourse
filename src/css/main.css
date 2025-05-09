@@ -1037,10 +1037,6 @@ footer {
 	width: 30%;
 }
 
-.paskha {
-	width: 40px;
-}
-
 @keyframes spc {
 	100% {
 		opacity: 0;
@@ -1707,7 +1703,7 @@ footer a:hover::after {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url('../assets/9 мая/Банер.jpg'); /* Замените на свою картинку */
+	background-image: url('/img/9 мая/Банер.jpg'); /* Замените на свою картинку */
 	background-size: cover;
 	background-position: center;
 	z-index: -1;
@@ -1852,4 +1848,94 @@ footer a:hover::after {
 	color: #d3212d;
 	font-weight: bold;
 	margin-top: 15px;
+}
+
+.tank {
+	width: 70px;
+	transition: 0.3s;
+	position: relative;
+	/* display: none; */
+}
+
+.tank:hover {
+	transform: rotate(720deg) scale(1.5);
+	position: relative;
+	z-index: 100;
+}
+
+.tank-counter {
+	text-align: center;
+	padding: 20px;
+	background: #f5f5f5;
+	border-radius: 10px;
+	margin: 20px 0;
+}
+
+.progress-bar {
+	height: 20px;
+	background: #e0e0e0;
+	border-radius: 10px;
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.progress-fill {
+	height: 100%;
+	background: #4caf50;
+	transition: width 0.3s ease;
+}
+
+.complete-message {
+	color: #4caf50;
+	animation: celebrate 0.5s ease;
+}
+
+@keyframes celebrate {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.exercise-counter {
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 500px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-counter .progress-bar {
+	height: 20px;
+	background: #f0f0f0;
+	border-radius: 10px;
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.exercise-counter .progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #ff7e5f, #feb47b);
+	transition: width 0.4s ease;
+}
+
+.exercise-counter .complete-message {
+	text-align: center;
+	color: #2e7d32;
+}
+
+.exercise-counter .complete-message h1 {
+	margin-bottom: 8px;
+}
+
+.exercise-counter .progress-message p {
+	text-align: center;
+	margin-top: 8px;
+	font-weight: 500;
 }

@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router'
+import { Tank } from '../../components/Tank'
 
 function ReactNative(props) {
 	return (
@@ -8,6 +8,7 @@ function ReactNative(props) {
 				<title>Курс по ReactNative | IT Course</title>
 				<meta name='description' content='Курс по ReactNative' />
 			</head>
+
 			<h1 style={{ textAlign: 'center' }}>React Native</h1>
 			<div className='home-of-course'>
 				<h3>Уроки React Native</h3>
@@ -37,6 +38,7 @@ function ReactNative(props) {
 					они перенесли в React Native и сделали возможность создания мобильных
 					приложений.
 				</p>
+				<Tank tankId='5' />
 				<h2>Зачем он нужен и почему крут?</h2>
 				<p>
 					Предположим, вы решили разработать некий мобильный проект. Тут же

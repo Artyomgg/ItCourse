@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Event } from '../components/NineOfMAy/Event'
+import { Event, HowManyExercisesIHave, HowManyTanksIHave } from '../components/NineOfMAy/Event'
+import { Tank } from '../components/Tank'
 
 function NineThOfMay(props) {
 	const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
@@ -73,8 +74,11 @@ function NineThOfMay(props) {
 								<>
 									<p>
 										Событие началось! Выполняйте задания и получайте награды!
+										Когда решишь все задания отправь в любой вариант проверки заданий скриншот что ты выполнил все 9 заданий и скинь скриншот что ты собрал все танки (Поздравляем вы собрали все танки!)
 									</p>
 									<Event></Event>
+									<HowManyTanksIHave/>
+									<HowManyExercisesIHave/>
 									<p className='event-end'>Конец события - 20 мая! Успейте!</p>
 								</>
 							) : (
@@ -105,6 +109,7 @@ function NineThOfMay(props) {
 
 					{/* Георгиевская ленточка */}
 					<div className='georgian-ribbon'></div>
+					<Tank tankId='3' />
 				</div>
 			</div>
 		</>
