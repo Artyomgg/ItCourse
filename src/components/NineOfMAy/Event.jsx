@@ -1,49 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import ReturnToTheNineMay from './ReturnToTheNineMay'
 
-export function Event() {
-	return (
-		<>
-			<Link to='one'>
-				<div className='btn1'>1 Задание</div>
-			</Link>
-			<Link to='two'>
-				<div className='btn2'>2 Задание</div>
-			</Link>
-			<Link to='three'>
-				<div className='btn3'>3 Задание</div>
-			</Link>
-			<Link to='four'>
-				<div className='btn4'>4 Задание</div>
-			</Link>
-			<Link to='five'>
-				<div className='btn5'>5 Задание</div>
-			</Link>
-			<Link to='six'>
-				<div className='btn6'>6 Задание</div>
-			</Link>
-			<Link to='seven'>
-				<div className='btn7'>7 Задание</div>
-			</Link>
-			<Link to='eight'>
-				<div className='btn8'>8 Задание</div>
-			</Link>
-			<Link to='nine'>
-				<div className='btn9'>9 Задание</div>
-			</Link>
-			<Link to='ten'>
-				<div className='btn10'>10 Задание</div>
-			</Link>
-		</>
-	)
-}
-
 const storageKey = 'correctAnswers'
-
 // Общий компонент для всех заданий
 function Quest({ questionText, correctAnswer, questId }) {
 	const [answer, setAnswer] = React.useState('')
+	const navigate = useNavigate()
 
 	const handleInputChange = e => {
 		setAnswer(e.target.value.toLowerCase())
@@ -59,6 +22,14 @@ function Quest({ questionText, correctAnswer, questId }) {
 				const updatedAnswers = [...currentAnswers, questId]
 				localStorage.setItem(storageKey, JSON.stringify(updatedAnswers))
 				alert('Правильно! Ответ сохранен.')
+
+				// Перенаправление на следующее задание
+				if (questId <= 9) {
+					// Если это не последнее задание
+					setTimeout(() => {
+						navigate(`/9may/${questId + 1}`)
+					}, 1500) // Задержка 1.5 секунды перед перенаправлением
+				}
 			} else {
 				alert('Вы уже правильно отвечали на этот вопрос!')
 			}
@@ -86,6 +57,109 @@ function Quest({ questionText, correctAnswer, questId }) {
 		</form>
 	)
 }
+
+// Модифицируем компонент Event для отображения только доступных заданий
+export function Event() {
+	const [completedExercises, setCompletedExercises] = React.useState([])
+	const [collectedTanks, setCollectedTanks] = React.useState([])
+
+	React.useEffect(() => {
+		// Загружаем выполненные задания
+		const exercises = JSON.parse(localStorage.getItem('correctAnswers')) || []
+		setCompletedExercises(exercises)
+
+		// Загружаем собранные танки
+		const tanks = JSON.parse(localStorage.getItem('collectedTanks')) || []
+		setCollectedTanks(tanks)
+
+		const handleStorageChange = () => {
+			const updatedExercises =
+				JSON.parse(localStorage.getItem('correctAnswers')) || []
+			setCompletedExercises(updatedExercises)
+
+			const updatedTanks =
+				JSON.parse(localStorage.getItem('collectedTanks')) || []
+			setCollectedTanks(updatedTanks)
+		}
+
+		window.addEventListener('storage', handleStorageChange)
+		return () => window.removeEventListener('storage', handleStorageChange)
+	}, [])
+
+	const exercises = [
+		{ id: 1, path: '/9may/1', name: '1 Задание' },
+		{ id: 2, path: '/9may/2', name: '2 Задание' },
+		{ id: 3, path: '/9may/3', name: '3 Задание' },
+		{ id: 4, path: '/9may/4', name: '4 Задание' },
+		{ id: 5, path: '/9may/5', name: '5 Задание' },
+		{ id: 6, path: '/9may/6', name: '6 Задание' },
+		{ id: 7, path: '/9may/7', name: '7 Задание' },
+		{ id: 8, path: '/9may/8', name: '8 Задание' },
+		{ id: 9, path: '/9may/9', name: '9 Задание' },
+		{ id: 10, path: '/9may/10', name: '10 Задание' },
+	]
+
+	return (
+		<div className='exercises-grid'>
+			{exercises.map(ex => {
+				// Проверяем, выполнено ли предыдущее задание
+				const isAvailable =
+					ex.id === 1 ||
+					completedExercises.includes(ex.id - 1) ||
+					completedExercises.includes(ex.id) ||
+					// Для 10 задания проверяем, собраны ли все танки
+					(ex.id === 10 && collectedTanks.length === 10)
+
+				// Проверяем, выполнено ли задание
+				const isCompleted =
+					completedExercises.includes(ex.id) ||
+					// 10 задание считается выполненным, если собраны все танки
+					(ex.id === 10 && collectedTanks.length === 10)
+
+				return (
+					<Link
+						key={ex.id}
+						to={ex.path}
+						className={`exercise-link ${isAvailable ? '' : 'disabled'}`}
+					>
+						<div className={`btn${ex.id}`}>
+							{ex.name}
+							{isCompleted && ' ✓'}
+						</div>
+					</Link>
+				)
+			})}
+		</div>
+	)
+}
+
+// Добавляем стили для disabled заданий
+const styles = `
+  .exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .exercise-link.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .exercise-link div {
+    transition: all 0.3s ease;
+  }
+  
+  .exercise-link:hover div {
+    transform: scale(1.05);
+  }
+`
+
+// Вставляем стили в head
+const styleElement = document.createElement('style')
+styleElement.innerHTML = styles
+document.head.appendChild(styleElement)
 
 // Стили вынесены отдельно для переиспользования
 const containerStyle = {
@@ -304,25 +378,33 @@ export function HowManyTanksIHave() {
 
 export function HowManyExercisesIHave() {
 	const [count, setCount] = React.useState(0)
-	const [totalExercises, setTotalExercises] = React.useState(9) // Всего заданий
+	const [collectedTanks, setCollectedTanks] = React.useState(0)
+	const [totalExercises, setTotalExercises] = React.useState(10) // Теперь 10 заданий
 
 	React.useEffect(() => {
 		// Получаем выполненные задания из localStorage
 		const exercises = JSON.parse(localStorage.getItem('correctAnswers')) || []
-		setCount(exercises.length)
+
+		// Получаем количество собранных танков
+		const tanks = JSON.parse(localStorage.getItem('collectedTanks')) || []
+		setCollectedTanks(tanks.length)
+
+		// Если все танки собраны, считаем 10 задание выполненным
+		const completedCount = exercises.length + (tanks.length === 10 ? 1 : 0)
+		setCount(completedCount)
 
 		// Обработчик изменений в localStorage
 		const handleStorageChange = () => {
 			const updatedExercises =
 				JSON.parse(localStorage.getItem('correctAnswers')) || []
-			setCount(updatedExercises.length)
+			const updatedTanks =
+				JSON.parse(localStorage.getItem('collectedTanks')) || []
+			setCollectedTanks(updatedTanks.length)
+			setCount(updatedExercises.length + (updatedTanks.length === 10 ? 1 : 0))
 		}
 
 		window.addEventListener('storage', handleStorageChange)
-
-		return () => {
-			window.removeEventListener('storage', handleStorageChange)
-		}
+		return () => window.removeEventListener('storage', handleStorageChange)
 	}, [])
 
 	return (
@@ -343,6 +425,7 @@ export function HowManyExercisesIHave() {
 					</div>
 					<p>
 						{count} из {totalExercises} заданий выполнено
+						{collectedTanks === 10 && ' (включая сбор всех танков)'}
 					</p>
 				</div>
 			)}

@@ -91,16 +91,16 @@ const App = () => {
 					<Route path='courses/photoshop' element={<Photoshop />}></Route>
 					<Route path='check' element={<CheckExercises />}></Route>
 					<Route path='9may' element={<NineThOfMay/>}></Route>
-					<Route path='9may/one' element={<OneNineMay/>}></Route>
-					<Route path='9may/two' element={<TwoNineMay/>}></Route>
-					<Route path='9may/three' element={<ThreeNineMay/>}></Route>
-					<Route path='9may/four' element={<FourNineMay/>}></Route>
-					<Route path='9may/five' element={<FiveNineMay/>}></Route>
-					<Route path='9may/six' element={<SixNineMay/>}></Route>
-					<Route path='9may/seven' element={<SevenNineMay/>}></Route>
-					<Route path='9may/eight' element={<EightNineMay/>}></Route>
-					<Route path='9may/nine' element={<NineNineMay/>}></Route>
-					<Route path='9may/ten' element={<LastQuestion/>}></Route>
+					<Route path='9may/1' element={<OneNineMay/>}></Route>
+					<Route path='9may/2' element={<TwoNineMay/>}></Route>
+					<Route path='9may/3' element={<ThreeNineMay/>}></Route>
+					<Route path='9may/4' element={<FourNineMay/>}></Route>
+					<Route path='9may/5' element={<FiveNineMay/>}></Route>
+					<Route path='9may/6' element={<SixNineMay/>}></Route>
+					<Route path='9may/7' element={<SevenNineMay/>}></Route>
+					<Route path='9may/8' element={<EightNineMay/>}></Route>
+					<Route path='9may/9' element={<NineNineMay/>}></Route>
+					<Route path='9may/10' element={<LastQuestion/>}></Route>
 					
 				</Routes>
 				<Footer></Footer>
