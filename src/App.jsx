@@ -12,6 +12,7 @@ import LastQuestion, {
 	ThreeNineMay,
 	TwoNineMay,
 } from './components/NineOfMAy/Event'
+import NotFoundPage from './components/NotFoundPage'
 import './css/main.css'
 import HtmlAll from './pages/AllHTML/HtmlAll'
 import NodeJsAll from './pages/AllNodeJSLessons/nodejs'
@@ -57,7 +58,6 @@ const App = () => {
 				</noscript>
 				<Header></Header>
 				<Routes>
-					<Router basename='/'></Router>
 					<Route path='/' element={<Home />}></Route>
 					<Route path='courses' element={<Courses />}></Route>
 					<Route path='courses/js' element={<JavaScript />}></Route>
@@ -111,6 +111,7 @@ const App = () => {
 					<Route path='9may/8' element={<EightNineMay />}></Route>
 					<Route path='9may/9' element={<NineNineMay />}></Route>
 					<Route path='9may/10' element={<LastQuestion />}></Route>
+					<Route path='*' element={<NotFoundPage />}></Route>
 				</Routes>
 				<Footer></Footer>
 			</R>
