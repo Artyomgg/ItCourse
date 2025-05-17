@@ -1,7 +1,17 @@
-import React from 'react'
 import { BrowserRouter as R, Route, Routes } from 'react-router'
 import Footer from './components/Footer'
 import Header from './components/header'
+import LastQuestion, {
+	EightNineMay,
+	FiveNineMay,
+	FourNineMay,
+	NineNineMay,
+	OneNineMay,
+	SevenNineMay,
+	SixNineMay,
+	ThreeNineMay,
+	TwoNineMay,
+} from './components/NineOfMAy/Event'
 import './css/main.css'
 import HtmlAll from './pages/AllHTML/HtmlAll'
 import NodeJsAll from './pages/AllNodeJSLessons/nodejs'
@@ -37,7 +47,6 @@ import Seven from './pages/JS/7'
 import Eight from './pages/JS/8'
 import Nine from './pages/JS/9'
 import NineThOfMay from './pages/NineThOfMay'
-import LastQuestion, { EightNineMay, FiveNineMay, FourNineMay, NineNineMay, OneNineMay, SevenNineMay, SixNineMay, TwoNineMay, ThreeNineMay } from './components/NineOfMAy/Event'
 
 const App = () => {
 	return (
@@ -48,6 +57,7 @@ const App = () => {
 				</noscript>
 				<Header></Header>
 				<Routes>
+					<Router basename='/'></Router>
 					<Route path='/' element={<Home />}></Route>
 					<Route path='courses' element={<Courses />}></Route>
 					<Route path='courses/js' element={<JavaScript />}></Route>
@@ -90,18 +100,17 @@ const App = () => {
 					<Route path='courses/vscode' element={<Vscode />}></Route>
 					<Route path='courses/photoshop' element={<Photoshop />}></Route>
 					<Route path='check' element={<CheckExercises />}></Route>
-					<Route path='9may' element={<NineThOfMay/>}></Route>
-					<Route path='9may/1' element={<OneNineMay/>}></Route>
-					<Route path='9may/2' element={<TwoNineMay/>}></Route>
-					<Route path='9may/3' element={<ThreeNineMay/>}></Route>
-					<Route path='9may/4' element={<FourNineMay/>}></Route>
-					<Route path='9may/5' element={<FiveNineMay/>}></Route>
-					<Route path='9may/6' element={<SixNineMay/>}></Route>
-					<Route path='9may/7' element={<SevenNineMay/>}></Route>
-					<Route path='9may/8' element={<EightNineMay/>}></Route>
-					<Route path='9may/9' element={<NineNineMay/>}></Route>
-					<Route path='9may/10' element={<LastQuestion/>}></Route>
-					
+					<Route path='9may' element={<NineThOfMay />}></Route>
+					<Route path='9may/1' element={<OneNineMay />}></Route>
+					<Route path='9may/2' element={<TwoNineMay />}></Route>
+					<Route path='9may/3' element={<ThreeNineMay />}></Route>
+					<Route path='9may/4' element={<FourNineMay />}></Route>
+					<Route path='9may/5' element={<FiveNineMay />}></Route>
+					<Route path='9may/6' element={<SixNineMay />}></Route>
+					<Route path='9may/7' element={<SevenNineMay />}></Route>
+					<Route path='9may/8' element={<EightNineMay />}></Route>
+					<Route path='9may/9' element={<NineNineMay />}></Route>
+					<Route path='9may/10' element={<LastQuestion />}></Route>
 				</Routes>
 				<Footer></Footer>
 			</R>
