@@ -27,6 +27,19 @@ function Home() {
 					</a>
 				</div>
 			</section>
+			<div style={{display:'flex', justifyContent:'center', marginTop:'30px'}}>
+				<iframe
+					style={{ margin: '0 auto' }}
+					width='560'
+					height='315'
+					src='https://www.youtube.com/embed/hMrFFVY3NYM?si=89tVgJix-1TyCNP6'
+					title='YouTube video player'
+					frameborder='0'
+					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+					referrerpolicy='strict-origin-when-cross-origin'
+					allowfullscreen
+				></iframe>
+			</div>
 			<section id='courses'>
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
