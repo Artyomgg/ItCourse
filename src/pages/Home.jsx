@@ -1,13 +1,20 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router'
-import { Tank } from '../components/Tank'
-
 function Home() {
+	useEffect(() => {
+		document.title = 'Главная | IT Course'
+	}, [])
 	return (
 		<>
-			<head>
+			{/* <head>
 				<title>Главная | IT Course</title>
 				<meta name='description' content='Главная страница' />
-			</head>
+			</head> */}
+			{/* <Helmet>
+				<title>Главная | IT Course</title>
+				<meta name='description' content='Главная страница' />
+			</Helmet> */}
+
 			<section id='hello'>
 				<div className='block-help-color'>
 					<h1>Изучай HTML, CSS, JS и Python с нуля!</h1>
@@ -27,19 +34,7 @@ function Home() {
 					</a>
 				</div>
 			</section>
-			<div style={{display:'flex', justifyContent:'center', marginTop:'30px'}}>
-				<iframe
-					style={{ margin: '0 auto' }}
-					width='560'
-					height='315'
-					src='https://www.youtube.com/embed/hMrFFVY3NYM?si=89tVgJix-1TyCNP6'
-					title='YouTube video player'
-					frameborder='0'
-					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-					referrerpolicy='strict-origin-when-cross-origin'
-					allowfullscreen
-				></iframe>
-			</div>
+
 			<section id='courses'>
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
@@ -151,7 +146,7 @@ function Home() {
 					</div>
 				</div>
 			</section>
-			<div
+			{/* <div
 				style={{
 					display: 'flex',
 					justifyContent: 'center',
@@ -169,12 +164,11 @@ function Home() {
 					title='YouTube video player'
 					width='560'
 				/>
-				<Tank tankId='1' />
-			</div>
+			</div> */}
 			<div className='splash-screen'>
 				<img
 					alt=''
-					src='\assets\free-icon-graduate-5404967withoneelement-DI7Mz8YI.png'
+					src='/IT-COURSE (1).png'
 				/>
 			</div>
 		</>

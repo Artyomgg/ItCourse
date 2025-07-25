@@ -1,6 +1,4 @@
-import React from 'react'
 import { Link } from 'react-router'
-import { Tank } from './Tank'
 
 function Footer(props) {
 	return (
@@ -56,8 +54,10 @@ function Footer(props) {
 						Вопросы по сайту, предложения?
 					</a>
 				</p>
-				<Tank tankId='2' />
-				<div className='copyright'>&copy; 2025 ItCourse. Все права защищены.</div>
+
+				<div className='copyright'>
+					&copy; 2025 ItCourse. Все права защищены.
+				</div>
 			</div>
 		</footer>
 	)

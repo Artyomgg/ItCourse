@@ -1030,11 +1030,11 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: spc 0.5s linear forwards 0.3s;
+	animation: spc 0.2s linear forwards 2s;
 }
 
 .splash-screen img {
-	width: 30%;
+	width: 60%;
 }
 
 @keyframes spc {

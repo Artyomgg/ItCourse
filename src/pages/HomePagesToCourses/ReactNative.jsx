@@ -1,5 +1,4 @@
 import { Link } from 'react-router'
-import { Tank } from '../../components/Tank'
 
 function ReactNative(props) {
 	return (
@@ -38,7 +37,7 @@ function ReactNative(props) {
 					они перенесли в React Native и сделали возможность создания мобильных
 					приложений.
 				</p>
-				<Tank tankId='5' />
+
 				<h2>Зачем он нужен и почему крут?</h2>
 				<p>
 					Предположим, вы решили разработать некий мобильный проект. Тут же

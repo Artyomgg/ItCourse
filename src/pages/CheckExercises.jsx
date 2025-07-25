@@ -1,12 +1,11 @@
-import React from 'react'
+import { useEffect } from 'react'
 
 function CheckExercises(props) {
+	useEffect(() => {
+		document.title = 'Проверить задания | IT Course'
+	}, [])
 	return (
 		<>
-			<head>
-				<title>Проверить задания | IT Course</title>
-				<meta name='description' content='Проверить задания на ItCourse' />
-			</head>
 			<div
 				className='check'
 				style={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}

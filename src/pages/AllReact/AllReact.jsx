@@ -1,6 +1,4 @@
-import React from 'react'
 import { Link } from 'react-router'
-import { Tank } from '../../components/Tank'
 
 function AllReact(props) {
 	return (
@@ -13,7 +11,7 @@ function AllReact(props) {
 				</Link>
 				<section id='start'></section>
 				<h1 style={{ textAlign: 'center' }}>Полный курс по Rect JS</h1>
-				<Tank tankId='7' />
+
 				<div className='block-video'>
 					<iframe
 						width='560'

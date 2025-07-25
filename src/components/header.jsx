@@ -8,7 +8,7 @@ function Header() {
 			<div className='block-logo'>
 				<img
 					alt=''
-					src='/img/free-icon-graduate-5404967withoneelement.png'
+					src='/icons8-шапка-выпускника-90.png'
 				/>
 				<h1>ItCourse</h1>
 			</div>
@@ -28,9 +28,6 @@ function Header() {
 				</li>
 				<li>
 					<a href='https://chart-beryl.vercel.app/'>Таблица лидеров</a>
-				</li>
-				<li>
-					<Link to='/9may'>9 Мая</Link>
 				</li>
 			</ul>
 		</section>

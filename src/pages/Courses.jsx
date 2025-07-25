@@ -1,13 +1,21 @@
 import { Link } from 'react-router'
-import { Tank } from '../components/Tank'
+import { useEffect } from 'react';
 
 function Courses() {
+	useEffect(() => {
+    document.title = 'Курсы | IT Course';
+  }, []);
 	return (
 		<>
-			<head>
+			{/* <head>
 				<title>Курсы | IT Course</title>
 				<meta name='description' content='Страница курсов' />
-			</head>
+			</head> */}
+			{/* <Helmet>
+        <title>Курсы | IT Course</title>
+        <meta name='description' content='Главная страница' />
+      </Helmet> */}
+
 			<section id='courses'>
 				<h2>Все курсы</h2>
 				<div className='card-conteiner'>
@@ -205,7 +213,6 @@ function Courses() {
 						</Link>
 					</div>
 				</div>
-				<Tank tankId='4' />
 			</section>
 		</>
 	)
