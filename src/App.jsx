@@ -1,4 +1,4 @@
-import { BrowserRouter as R, Route, Routes } from 'react-router'
+import { Route, BrowserRouter as Router, Routes } from 'react-router'
 
 import Footer from './components/Footer'
 import Header from './components/header'
@@ -37,63 +37,12 @@ import Six from './pages/JS/6'
 import Seven from './pages/JS/7'
 import Eight from './pages/JS/8'
 import Nine from './pages/JS/9'
+import AppRouter from './Router/Router'
 
 const App = () => {
 	return (
 		<>
-			<R>
-				<noscript>
-					<p>JavaScript отключен включите его в браузере !!!!!!</p>
-				</noscript>
-				<Header></Header>
-				<Routes>
-					<Route path='/' element={<Home />}></Route>
-					<Route path='courses' element={<Courses />}></Route>
-					<Route path='courses/js' element={<JavaScript />}></Route>
-					<Route path='courses/js/1' element={<One />}></Route>
-					<Route path='courses/js/2' element={<Two />}></Route>
-					<Route path='courses/js/3' element={<Three />}></Route>
-					<Route path='courses/js/4' element={<Four />}></Route>
-					<Route path='courses/js/5' element={<Five />}></Route>
-					<Route path='courses/js/6' element={<Six />}></Route>
-					<Route path='courses/js/7' element={<Seven />}></Route>
-					<Route path='courses/js/8' element={<Eight />}></Route>
-					<Route path='courses/js/9' element={<Nine />}></Route>
-					<Route path='courses/js/10' element={<Ten />}></Route>
-					<Route path='courses/js/11' element={<Eleven />}></Route>
-					<Route path='courses/js/12' element={<Twelve />}></Route>
-					<Route path='courses/js/13' element={<Thirteen />}></Route>
-					<Route path='courses/js/14' element={<Fourteen />}></Route>
-					<Route path='courses/js/15' element={<Fifteen />}></Route>
-					<Route path='courses/nodejs' element={<NodeJs />}></Route>
-					<Route
-						path='courses/nodejs/nodejslessons'
-						element={<NodeJsAll />}
-					></Route>
-					<Route path='courses/react' element={<ReactJS />}></Route>
-					<Route
-						path='courses/react/reactlessons'
-						element={<AllReact />}
-					></Route>
-					<Route path='courses/reactnative' element={<ReactNative />}></Route>
-					<Route
-						path='courses/reactnative/reactnative'
-						element={<ReactNativeAll />}
-					></Route>
-					<Route path='courses/python' element={<Python />}></Route>
-					<Route path='courses/python/python' element={<PythonAll />}></Route>
-					<Route path='courses/html' element={<Html />}></Route>
-					<Route path='courses/html/html' element={<HtmlAll />}></Route>
-					<Route path='courses/css' element={<CSS />}></Route>
-					<Route path='courses/css/css' element={<CSSALL />}></Route>
-					<Route path='courses/vscode' element={<Vscode />}></Route>
-					<Route path='courses/photoshop' element={<Photoshop />}></Route>
-					<Route path='check' element={<CheckExercises />}></Route>
-
-					<Route path='*' element={<NotFoundPage />}></Route>
-				</Routes>
-				<Footer></Footer>
-			</R>
+			<AppRouter/>
 		</>
 	)
 }

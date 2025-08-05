@@ -165,12 +165,12 @@ function Home() {
 					width='560'
 				/>
 			</div> */}
-			<div className='splash-screen'>
+			{/* <div className='splash-screen'>
 				<img
 					alt=''
 					src='/IT-COURSE (1).png'
 				/>
-			</div>
+			</div> */}
 		</>
 	)
 }

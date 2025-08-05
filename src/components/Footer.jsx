@@ -4,7 +4,7 @@ function Footer(props) {
 	return (
 		// <footer>
 		// 	<div className='block-logo'>
-		// 		<img alt='' src='/public/img/free-icon-graduate-5404967.png' />
+		// 		<img alt='' src='/img/free-icon-graduate-5404967.png' />
 		// 		<h1>ItCourse</h1>
 		// 	</div>
 		// 	<h4>Copyright © 2025 Дудко Артем</h4>
@@ -22,7 +22,10 @@ function Footer(props) {
 		// </footer>
 		<footer>
 			<div className='footer-content'>
-				<h2>Название вашего сайта</h2>
+				<div className="logo-on-footer">
+					<img src="" alt="" />
+				</div>
+				<h2>ItCourse</h2>
 				<p>Мы помогаем людям изучать программирование легко и интересно.</p>
 
 				<div className='social-links'>
