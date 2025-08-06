@@ -22,10 +22,12 @@ function Footer(props) {
 		// </footer>
 		<footer>
 			<div className='footer-content'>
-				<div className="logo-on-footer">
-					<img src="" alt="" />
-				</div>
-				<h2>ItCourse</h2>
+				<h2>
+					<div className='logo-on-footer'>
+						<img src='/icons8-шапка-выпускника-90.png' alt='' />
+					</div>
+					ItCourse
+				</h2>
 				<p>Мы помогаем людям изучать программирование легко и интересно.</p>
 
 				<div className='social-links'>

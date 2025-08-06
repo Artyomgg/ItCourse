@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router'
 import Footer from '../components/Footer'
 import Header from '../components/header'
 import NotFoundPage from '../components/NotFoundPage'
+import Splash from '../components/Splash'
 import '../css/main.css'
 import HtmlAll from '../pages/AllHTML/HtmlAll'
 import NodeJsAll from '../pages/AllNodeJSLessons/nodejs'
@@ -37,12 +38,11 @@ import Six from '../pages/JS/6'
 import Seven from '../pages/JS/7'
 import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
-import Splash from '../components/Splash'
 
 function AppRouter(props) {
 	return (
 		<Router>
-			<Splash/>
+			<Splash />
 			<noscript>
 				<p>JavaScript отключен включите его в браузере !!!!!!</p>
 			</noscript>

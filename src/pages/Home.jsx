@@ -17,21 +17,14 @@ function Home() {
 
 			<section id='hello'>
 				<div className='block-help-color'>
-					<h1>Изучай HTML, CSS, JS и Python с нуля!</h1>
-					<h2>Практические курсы для начинающих</h2>
+					<h1>Сделай первый шаг в IT!</h1>
+					<h2>Практические курсы для всех</h2>
 					<Link className='fancy' to='courses'>
 						<span className='top-key' />
 						<span className='text'>Начать обучение</span>
 						<span className='bottom-key-1' />
 						<span className='bottom-key-2' />
 					</Link>
-					<br />
-					<a className='fancy' href='https://artyomgg.github.io/Donwload-page/'>
-						<span className='top-key' />
-						<span className='text'>Скачать наше приложение (для Android)</span>
-						<span className='bottom-key-1' />
-						<span className='bottom-key-2' />
-					</a>
 				</div>
 			</section>
 
