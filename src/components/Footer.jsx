@@ -31,7 +31,7 @@ function Footer(props) {
 				<p>Мы помогаем людям изучать программирование легко и интересно.</p>
 
 				<div className='social-links'>
-					<a href='https://t.me/artyom_dudko'>
+					<a href='https://t.me/artemo0f'>
 						<i className='bx bxl-telegram'></i>
 					</a>
 					<a href='https://www.tiktok.com/@itcourse.omg?is_from_webapp=1&sender_device=pc'>
