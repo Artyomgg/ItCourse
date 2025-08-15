@@ -41,7 +41,7 @@ ul {
 	background: url('/public/img/55b7feaab8ae077c13a865c4c4899bfcd55cea8b.png')
 		no-repeat;
 	background-size: 100%;
-	background-position: s;
+	background-position: center;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
