@@ -26,7 +26,7 @@ function Header() {
     <section className='top-nav' ref={menuRef}>
       <div className='block-logo'>
         <img alt='' src='/icons8-шапка-выпускника-90.png' />
-        <h1>ItCourse</h1>
+        <h1>IT-COURSE</h1>
       </div>
 
       <div
