@@ -32,7 +32,7 @@ function Home() {
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
 					<div className='card big'>
-						<img src='/public/img/course/icons8-react-native-48.png' alt='React Native' />
+						<img src='/img/course/icons8-react-native-48.png' alt='React Native' />
 						<h2>Курс по React Native</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -50,7 +50,7 @@ function Home() {
 						</Link>
 					</div>
 					<div className='card not-big'>
-						<img src='/public/img/course/icons8-python-64.png' alt='Python' />
+						<img src='/img/course/icons8-python-64.png' alt='Python' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
