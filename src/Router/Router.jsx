@@ -12,6 +12,7 @@ import AllReact from '../pages/AllReact/AllReact'
 import ReactNativeAll from '../pages/AllReactNative/ReactNativeAll'
 import CheckExercises from '../pages/CheckExercises'
 import Courses from '../pages/Courses'
+import FirstLesson from '../pages/Courses for school/6 class/FirstLesson'
 import CSSALL from '../pages/CSSALL/CSSALL'
 import Home from '../pages/Home'
 import CSS from '../pages/HomePagesToCourses/CSS'
@@ -87,7 +88,8 @@ function AppRouter(props) {
 				<Route path='courses/vscode' element={<Vscode />}></Route>
 				<Route path='courses/photoshop' element={<Photoshop />}></Route>
 				<Route path='check' element={<CheckExercises />}></Route>
-
+				<Route path='courses/forschool/sixclass/1' element={<FirstLesson/>}></Route>
+				
 				<Route path='*' element={<NotFoundPage />}></Route>
 			</Routes>
 			<Footer></Footer>

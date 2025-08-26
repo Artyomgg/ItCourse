@@ -31,57 +31,46 @@ function Home() {
 			<section id='courses'>
 				<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 				<div className='card-conteiner'>
-					<div className='card not-big'>
-						<img alt='' src='/img/course/icons8-питон.gif' />
-						<h2>Курс Python-kids</h2>
+					<div className='card big'>
+						<img src='/public/img/course/icons8-react-native-48.png' alt='React Native' />
+						<h2>Курс по React Native</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
 							<ol>
-								<li>Основы Python</li>
+								<li>React Native</li>
 							</ol>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
-								Особенность курса: Видео-курс
+							<h4 style={{ marginTop: '5px' }}>Подходит для более опытных</h4>
+							<h4 style={{ marginTop: '5px' }}>
+								Особенность курса: Надо знать HTML, CSS, JS и базу React JS
 							</h4>
-							<h5>Сложность: ★</h5>
+							<h5>Сложность: ★ ★ ★ ★</h5>
 						</div>
-						<a className='a-btn' href='https://it-course-k.vercel.app/'>
+						<Link to='/courses/reactnative' className='a-btn'>
 							<div className='btn'>Начать обучение</div>
-						</a>
+						</Link>
 					</div>
 					<div className='card not-big'>
-						<img alt='' src='/img/course/icons8-питон.gif' />
+						<img src='/public/img/course/icons8-python-64.png' alt='Python' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
 							<ol>
 								<li>Основы Python</li>
 							</ol>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
+							<h4 style={{ marginTop: '5px' }}>
 								Подходит для новичков и более опытных
 							</h4>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
+							<h4 style={{ marginTop: '5px' }}>
 								Особенность курса: Видео-курс
 							</h4>
 							<h5>Сложность: ★ ★ ★</h5>
 						</div>
-						<Link className='a-btn' to='courses/python'>
+						<Link to='/courses/python' className='a-btn'>
 							<div className='btn'>Начать обучение</div>
 						</Link>
 					</div>
 					<div className='card big'>
-						<img alt='' src='/img/course/icons8-javascript.gif' />
+						<img src='/img/course/icons8-javascript-48.png' alt='JavaScript' />
 						<h2>Курс по JS</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -89,51 +78,15 @@ function Home() {
 								<li>Основы JavaScript</li>
 								<li>Работа с DOM</li>
 							</ol>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
+							<h4 style={{ marginTop: '5px' }}>
 								Подходит для новичков и более опытных
 							</h4>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
+							<h4 style={{ marginTop: '5px' }}>
 								Особенность курса: Надо знать HTML и CSS
 							</h4>
 							<h5>Сложность: ★ ★ ★</h5>
 						</div>
-						<Link className='a-btn' to='courses/js'>
-							<div className='btn'>Начать обучение</div>
-						</Link>
-					</div>
-					<div className='card'>
-						<img alt='' src='/img/course/icons8-html.gif' />
-						<h2>Курс по HTML</h2>
-						<div className='desc'>
-							<h4>Здесь мы изучим:</h4>
-							<ol>
-								<li>Основы HTML</li>
-							</ol>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
-								Подходит для новичков
-							</h4>
-							<h4
-								style={{
-									marginTop: '5px',
-								}}
-							>
-								Особенность курса: Видео-курс
-							</h4>
-							<h5>Сложность: ★</h5>
-						</div>
-						<Link className='a-btn' to='courses/html'>
+						<Link to='/courses/js' className='a-btn'>
 							<div className='btn'>Начать обучение</div>
 						</Link>
 					</div>

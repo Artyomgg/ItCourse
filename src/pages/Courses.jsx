@@ -20,7 +20,7 @@ function Courses() {
 				<h2>Все курсы</h2>
 				<div className='card-conteiner'>
 					<div className='card big'>
-						<img src='/img/course/icons8-javascript.gif' alt='JavaScript' />
+						<img src='/img/course/icons8-javascript-48.png' alt='JavaScript' />
 						<h2>Курс по JS</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -67,7 +67,7 @@ function Courses() {
 					</div>
 
 					<div className='card big'>
-						<img src='/img/course/icons8-react.gif' alt='React' />
+						<img src='/img/course/icons8-react-48.png' alt='React' />
 						<h2>Курс по React JS за 4 часа</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -88,7 +88,7 @@ function Courses() {
 					</div>
 
 					<div className='card big'>
-						<img src='/img/course/icons8-react-native.gif' alt='React Native' />
+						<img src='/public/img/course/icons8-react-native-48.png' alt='React Native' />
 						<h2>Курс по React Native</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -107,7 +107,7 @@ function Courses() {
 					</div>
 
 					<div className='card not-big'>
-						<img src='/img/course/icons8-питон.gif' alt='Python' />
+						<img src='/public/img/course/icons8-python-64.png' alt='Python' />
 						<h2>Курс по Python</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -128,7 +128,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img src='/img/course/icons8-питон.gif' alt='Python' />
+						<img src='/public/img/course/icons8-python-64.png' alt='Python' />
 						<h2>Курс Python-kids</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -146,7 +146,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img src='/img/course/icons8-html.gif' alt='HTML' />
+						<img src='\img\course\icons8-html-64.png' alt='HTML' />
 						<h2>Курс по HTML</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим:</h4>
@@ -168,7 +168,6 @@ function Courses() {
 						<img
 							src='/img/course/icons8-css3-48.png'
 							alt='CSS'
-							className='animated-icon'
 						/>
 						<h2>Курс по CSS</h2>
 						<div className='desc'>
@@ -191,7 +190,6 @@ function Courses() {
 						<img
 							src='/img/course/icons8-visual-studio-code-48.png'
 							alt='VS Code'
-							className='animated-icon'
 						/>
 						<h2>Курс для установке редактора кода VS CODE</h2>
 						<div className='desc'>
@@ -203,7 +201,7 @@ function Courses() {
 					</div>
 
 					<div className='card'>
-						<img src='/img/course/icons8-photoshop.gif' alt='Photoshop' />
+						<img src='\img\course\icons8-photoshop-48.png' alt='Photoshop' />
 						<h2>Полный курс по Photoshop</h2>
 						<div className='desc'>
 							<h4>Здесь мы изучим Photoshop</h4>
