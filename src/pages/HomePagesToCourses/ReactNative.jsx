@@ -1,13 +1,12 @@
+import { useEffect } from "react"
 import { Link } from 'react-router'
 
 function ReactNative(props) {
+	useEffect(() => {
+			document.title = 'React Native курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по ReactNative | IT Course</title>
-				<meta name='description' content='Курс по ReactNative' />
-			</head>
-
 			<h1 style={{ textAlign: 'center' }}>React Native</h1>
 			<div className='home-of-course'>
 				<h3>Уроки React Native</h3>

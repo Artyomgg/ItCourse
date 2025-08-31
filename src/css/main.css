@@ -389,6 +389,69 @@ ol, ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+}
+
+.conteiner-with-anim .card{
+    transform: translateY(30px);
+    opacity: 0;
+    animation: topicAppear 0.6s ease forwards;
+    animation-delay: 0.15s;
+}
+
+.conteiner-with-anim .card:nth-child(2){
+    animation-delay: 0.30s;
+}
+
+.conteiner-with-anim .card:nth-child(3){
+    animation-delay: 0.45s;
+}
+.conteiner-with-anim .card:nth-child(4){
+    animation-delay: 0.50s;
+}
+.conteiner-with-anim .card:nth-child(5){
+    animation-delay: 0.53s;
+}
+.conteiner-with-anim .card:nth-child(6){
+    animation-delay: 0.55s;
+}
+.conteiner-with-anim .card:nth-child(7){
+    animation-delay: 0.57s;
+}
+.conteiner-with-anim .card:nth-child(8){
+    animation-delay: 0.59s;
+}
+.conteiner-with-anim .card:nth-child(9){
+    animation-delay: 1.01s;
+}
+.conteiner-with-anim .card:nth-child(10){
+    animation-delay: 1.03s;
+}
+.conteiner-with-anim .card:nth-child(11){
+    animation-delay: 1.05s;
+}
+.conteiner-with-anim .card:nth-child(12){
+    animation-delay: 1.07s;
+}
+.conteiner-with-anim .card:nth-child(13){
+    animation-delay: 1.09s;
+}
+.conteiner-with-anim .card:nth-child(14){
+    animation-delay: 1.11s;
+}
+.conteiner-with-anim .card:nth-child(15){
+    animation-delay: 1.13s;
+}
+.conteiner-with-anim .card:nth-child(16){
+    animation-delay: 1.15s;
+}
+
+
+@keyframes topicAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Анимация для иконок */
@@ -1094,7 +1157,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: spc 0.2s linear forwards 2s;
+    animation: spc 0.2s linear forwards 1s;
 }
 
 .splash-screen img {
@@ -1741,6 +1804,13 @@ footer a:hover::after {
     z-index: 2;
 }
 
+
+@media screen and (max-width: 500){
+    #fourfourfour{
+        width: 100%;
+    }
+}
+
 /* Адаптация для маленьких экранов */
 @media screen and (max-width: 400px) {
     .card {
@@ -1756,6 +1826,7 @@ footer a:hover::after {
     .card h4 {
         font-size: 13px;
     }
+    
 }
 
 @media screen and (max-width: 300px) {
@@ -1763,4 +1834,526 @@ footer a:hover::after {
         padding: 2px 6px;
         font-size: 10px;
     }
+}
+
+/* ======================== */
+/* === Стили для уроков === */
+/* ======================== */
+
+.lesson-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #3a3a52 0%, #2a2b3b 100%);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(253, 172, 130, 0.3);
+}
+
+.lesson-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(42, 43, 59, 0.8);
+    border-radius: 20px;
+    border: 2px solid var(--orangeColor);
+}
+
+.lesson-header h1 {
+    color: var(--orangeColor);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.topic-icon {
+    font-size: 3rem;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.lesson-content {
+    line-height: 1.8;
+}
+
+.content-block {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(42, 43, 59, 0.9);
+    border-radius: 15px;
+    border-left: 4px solid var(--orangeColor);
+    transition: transform 0.3s ease;
+}
+
+.content-block:hover {
+    transform: translateX(5px);
+}
+
+.content-block h2 {
+    color: var(--orangeColor);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--orangeColor);
+    padding-bottom: 10px;
+}
+
+.content-block h3 {
+    color: #fdac82;
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.content-block p {
+    color: var(--whiteColor);
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.content-block p:first-letter {
+    font-size: 1.3em;
+    color: var(--orangeColor);
+    font-weight: bold;
+}
+
+.definitions {
+    background: linear-gradient(135deg, #fdac82 0%, #ff8a65 100%);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border: 3px solid #ff7043;
+    box-shadow: 0 5px 15px rgba(253, 172, 130, 0.3);
+}
+
+.definitions h3 {
+    color: var(--darkColor);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.bold-text {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 12px 0;
+    border-left: 5px solid var(--darkColor);
+    font-size: 1.1rem;
+    color: var(--darkColor);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bold-text strong {
+    color: #e64a19;
+}
+
+.images {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.images h3 {
+    color: var(--orangeColor);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lesson-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid var(--orangeColor);
+    margin: 15px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.lesson-image:hover {
+    transform: scale(1.02);
+}
+
+.exercises {
+    background: linear-gradient(135deg, #585a6e 0%, #4a4c5e 100%);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    border: 2px solid var(--orangeColor);
+}
+
+.exercises h2 {
+    color: var(--orangeColor);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.exercise {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid var(--orangeColor);
+    transition: transform 0.3s ease;
+}
+
+.exercise:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.exercise h3 {
+    color: var(--darkColor);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--orangeColor);
+    padding-bottom: 8px;
+}
+
+.exercise p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Анимации для плавного появления */
+.content-block, .definitions, .exercise {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для списков в контенте */
+.content-block ul, .content-block ol {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.content-block li {
+    color: var(--whiteColor);
+    margin: 8px 0;
+    padding: 5px;
+    background: rgba(253, 172, 130, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--orangeColor);
+}
+
+/* Специальные стили для детей */
+.kid-friendly {
+    position: relative;
+}
+
+.kid-friendly::before {
+    content: '👶';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    background: var(--orangeColor);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+    0%, 7%, 14%, 21%, 28% {
+        transform: rotate(0);
+    }
+    3.5%, 10.5%, 17.5%, 24.5% {
+        transform: rotate(-5deg);
+    }
+    5%, 12%, 19%, 26% {
+        transform: rotate(5deg);
+    }
+}
+
+
+
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .lesson-container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    
+    .lesson-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-block h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-block h3 {
+        font-size: 1.2rem;
+    }
+    
+    .content-block p {
+        font-size: 1rem;
+    }
+    
+    .definitions, .exercises {
+        padding: 20px;
+    }
+    
+    .topic-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lesson-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .content-block {
+        padding: 15px;
+    }
+    
+    .content-block h2 {
+        font-size: 1.3rem;
+    }
+    
+    .bold-text {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .exercise {
+        padding: 15px;
+    }
+    
+    .exercise h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Специальные эффекты для интерактивности */
+.interactive-highlight {
+    position: relative;
+    cursor: pointer;
+}
+
+.interactive-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--orangeColor);
+    transition: width 0.3s ease;
+}
+
+.interactive-highlight:hover::after {
+    width: 100%;
+}
+
+/* Стили для нумерованных шагов */
+.step-number {
+    background: var(--orangeColor);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Анимация мигания для важного контента */
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.7;
+    }
+}
+
+.important {
+    animation: blink 3s infinite;
+    background: linear-gradient(135deg, #ff7043 0%, #ff5252 100%);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ff1744;
+}
+
+/* ======================== */
+/* === Стили для грида изображений === */
+/* ======================== */
+
+.images {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.images h3 {
+    color: var(--orangeColor);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.lesson-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid var(--orangeColor);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.lesson-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(253, 172, 130, 0.4);
+    border-color: #ff8a65;
+}
+
+/* Адаптация для разных размеров экранов */
+@media screen and (min-width: 1024px) {
+    .images-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .lesson-image {
+        height: 280px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .images-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .lesson-image {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .lesson-image {
+        height: 200px;
+    }
+    
+    .images h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .images-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .lesson-image {
+        height: 220px;
+        max-width: 100%;
+    }
+    
+    .images h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Стили для модального окна (опционально) */
+.image-modal {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    border: 3px solid var(--orangeColor);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--orangeColor);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: #ff8a65;
+    transform: rotate(90deg);
 }

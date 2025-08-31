@@ -1,13 +1,12 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router'
 
 function Html(props) {
+	useEffect(() => {
+			document.title = 'HTML курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по HTML | IT Course</title>
-				<meta name='description' content='Курс по HTML' />
-			</head>
 			<h1 style={{ textAlign: 'center' }}>HTML</h1>
 			<div className='home-of-course'>
 				<h3>Уроки HTML для начинающих</h3>

@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router'
 
 function ReactJS() {
+	useEffect(() => {
+			document.title = 'React JS курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по React | IT Course</title>
-				<meta name='description' content='Курс по React' />
-			</head>
 			<h1 style={{ textAlign: 'center' }}>React JS</h1>
 			<div className='home-of-course'>
 				<h3>Полный курс по React JS</h3>

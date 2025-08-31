@@ -26,7 +26,7 @@ function Footer(props) {
 					<div className='logo-on-footer'>
 						<img src='/icons8-шапка-выпускника-90.png' alt='' />
 					</div>
-					ItCourse
+					IT-COURSE
 				</h2>
 				<p>Мы помогаем людям изучать программирование легко и интересно.</p>
 
@@ -61,7 +61,7 @@ function Footer(props) {
 				</p>
 
 				<div className='copyright'>
-					&copy; 2025 ItCourse. Все права защищены.
+					&copy; 2025 IT-COURSE. Все права защищены.
 				</div>
 			</div>
 		</footer>

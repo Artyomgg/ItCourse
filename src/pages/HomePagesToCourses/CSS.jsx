@@ -1,13 +1,12 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router'
 
 function CSS(props) {
+	useEffect(() => {
+			document.title = 'CSS курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по CSS | IT Course</title>
-				<meta name='description' content='Курс по CSS' />
-			</head>
 			<h1 style={{ textAlign: 'center' }}>CSS</h1>
 			<div className='home-of-course'>
 				<h3>Уроки CSS для начинающих</h3>

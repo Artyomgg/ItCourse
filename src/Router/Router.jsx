@@ -12,7 +12,6 @@ import AllReact from '../pages/AllReact/AllReact'
 import ReactNativeAll from '../pages/AllReactNative/ReactNativeAll'
 import CheckExercises from '../pages/CheckExercises'
 import Courses from '../pages/Courses'
-import FirstLesson from '../pages/Courses for school/6 class/FirstLesson'
 import CSSALL from '../pages/CSSALL/CSSALL'
 import Home from '../pages/Home'
 import CSS from '../pages/HomePagesToCourses/CSS'
@@ -39,6 +38,10 @@ import Six from '../pages/JS/6'
 import Seven from '../pages/JS/7'
 import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
+import HomePageOFAllCourses from '../pages/Courses for school/HomePageOFCourse'
+import HomeOfClasses from '../pages/Courses for school/HomeOfClasses'
+import Topics from '../pages/Courses for school/6 class/topics/Topic'
+import LessonRenderer from '../pages/Courses for school/6 class/topics/LessonRender'
 
 function AppRouter(props) {
 	return (
@@ -88,7 +91,10 @@ function AppRouter(props) {
 				<Route path='courses/vscode' element={<Vscode />}></Route>
 				<Route path='courses/photoshop' element={<Photoshop />}></Route>
 				<Route path='check' element={<CheckExercises />}></Route>
-				<Route path='courses/forschool/sixclass/1' element={<FirstLesson/>}></Route>
+				<Route path='courses/forschool' element={<HomePageOFAllCourses/>}></Route>
+				<Route path='courses/forschool/home/:classId' element={<HomeOfClasses/>}></Route>
+				<Route path='courses/forschool/6/topic/:topicId' element={<Topics/>}></Route>
+				<Route path='courses/forschool/6/topic/:topicId/:lessonId' element={<LessonRenderer/>}></Route>
 				
 				<Route path='*' element={<NotFoundPage />}></Route>
 			</Routes>

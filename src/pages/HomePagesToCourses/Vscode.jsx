@@ -1,8 +1,12 @@
+import { useEffect } from "react";
+
+
 function Vscode(props) {
+	useEffect(() => {
+			document.title = 'Установка VS CODE | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<title>Курс по VSCODE | IT Course</title>
-			<meta name='description' content='Курс по VSCODE' />
 			<div className='home-of-course'>
 				<h3>Установка VS CODE</h3>
 				<p>

@@ -1,12 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 function Photoshop(props) {
+	useEffect(() => {
+			document.title = 'Photoshop курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по Photoshop | IT Course</title>
-				<meta name='description' content='Курс по Photoshop' />
-			</head>
 			<h1 style={{ textAlign: 'center' }}>Photoshop</h1>
 			<div className='home-of-course'>
 				<h2>Photoshop для начинающих</h2>

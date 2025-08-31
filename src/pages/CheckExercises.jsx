@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 function CheckExercises(props) {
 	useEffect(() => {
-		document.title = 'Проверить задания | IT Course'
+		document.title = 'Проверить задания | IT-COURSE'
 	}, [])
 	return (
 		<>

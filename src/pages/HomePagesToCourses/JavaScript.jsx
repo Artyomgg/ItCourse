@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from 'react-router'
 
 function JavaScript(props) {
+	useEffect(() => {
+			document.title = 'JavaScript курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по JavaScript | IT Course</title>
-				<meta name='description' content='Курс по JavaScript' />
-			</head>
 			<div>
 				<link
 					href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'

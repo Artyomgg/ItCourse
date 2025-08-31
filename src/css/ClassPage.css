@@ -1,0 +1,329 @@
+/* ClassPage.css */
+
+.class-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--darkColor) 0%, #2a2b3b 100%);
+  padding: 20px;
+  color: var(--whiteColor);
+}
+
+/* Шапка */
+.class-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--whiteColor);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+.class-title-section {
+  display: flex;
+  align-items: start;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.class-icon-large {
+  font-size: 4rem;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 2px solid var(--class-color);
+}
+
+.class-title-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, var(--class-color), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.class-title-section p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Сетка тем */
+.topics-section {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.topics-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--whiteColor);
+}
+
+.section-description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.topic-card {
+  background: linear-gradient(145deg, #3a3b50, #2e2f42);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: topicAppear 0.6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--class-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.topic-card:hover::before {
+  transform: scaleX(1);
+}
+
+@keyframes topicAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок темы */
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.topic-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 2px solid var(--class-color);
+}
+
+.topic-header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--whiteColor);
+  flex: 1;
+}
+
+.topic-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+/* Мета-информация */
+.topic-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lessons-count, .duration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lessons-count::before {
+  content: '📚';
+  font-size: 1.1rem;
+}
+
+.duration::before {
+  content: '⏱️';
+  font-size: 1.1rem;
+}
+
+/* Кнопка */
+.topic-footer {
+  margin-top: 15px;
+}
+
+.start-topic-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.start-topic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Статистика */
+.class-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, #3a3b50, #2e2f42);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--class-color), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+  .class-title-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .class-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .class-title-section h1 {
+    font-size: 2rem;
+  }
+  
+  .back-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .class-page {
+    padding: 15px;
+  }
+  
+  .topic-card {
+    padding: 20px;
+  }
+  
+  .topic-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .topic-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .class-icon-large {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+  }
+}
+
+.loading-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orangeColor);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.loading-circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-circle:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}

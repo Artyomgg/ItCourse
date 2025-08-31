@@ -9,11 +9,7 @@ function Splash(props) {
 		if (isFirstVisit) {
 			sessionStorage.setItem('isFirstVisit', 'false')
 		} else {
-			// Показываем splash screen только 3 секунды при повторных посещениях
-			const timer = setTimeout(() => {
-				setShowSplash(false)
-			}, 3000)
-			return () => clearTimeout(timer)
+			return
 		}
 	}, [])
 

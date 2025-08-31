@@ -1,12 +1,12 @@
+import { useEffect } from "react";
 import { Link } from 'react-router'
 
 function Python() {
+	useEffect(() => {
+			document.title = 'Python курс | IT-COURSE';
+	}, []);
 	return (
 		<>
-			<head>
-				<title>Курс по Python | IT Course</title>
-				<meta name='description' content='Курс по Python' />
-			</head>
 			<h1 style={{ textAlign: 'center' }}>Python</h1>
 			<div className='home-of-course'>
 				<h3>Уроки Python для начинающих</h3>
