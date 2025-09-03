@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import PencilLoader from '../../../../components/PencilLoader'
-import { TopicsDataEightClass } from '../../../../Data/LessonsData.js'
+import { TopicsDataNineClass } from '../../../../Data/LessonsData.js'
 
-function TopicsEi(props) {
+function TopicsNi(props) {
 	const { topicId } = useParams()	
 	const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
 
-	const currentTopic = TopicsDataEightClass[topicId]
+	const currentTopic = TopicsDataNineClass[topicId]
 
 	console.log(currentTopic);
 
@@ -26,7 +26,7 @@ function TopicsEi(props) {
   };
 
   const handleBack = () => {
-    navigate('/courses/forschool/home/8');
+    navigate('/courses/forschool/home/9');
   };
 
   if (isLoading) {
@@ -92,4 +92,4 @@ function TopicsEi(props) {
 	);
 }
 
-export default TopicsEi;
+export default TopicsNi;

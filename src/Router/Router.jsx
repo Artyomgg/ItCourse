@@ -46,6 +46,8 @@ import Six from '../pages/JS/6'
 import Seven from '../pages/JS/7'
 import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
+import LessonRendererNi from '../pages/Courses for school/9 class/topics/LessonRender'
+import TopicsNi from '../pages/Courses for school/9 class/topics/Topic'
 
 function AppRouter(props) {
 	return (
@@ -116,6 +118,10 @@ function AppRouter(props) {
 					element={<TopicsEi />}
 				></Route>
 				<Route
+					path='courses/forschool/9/topic/:topicId'
+					element={<TopicsNi />}
+				></Route>
+				<Route
 					path='courses/forschool/6/topic/:topicId/:lessonId'
 					element={<LessonRenderer />}
 				></Route>
@@ -126,6 +132,10 @@ function AppRouter(props) {
 				<Route
 					path='courses/forschool/8/topic/:topicId/:lessonId'
 					element={<LessonRendererEi />}
+				></Route>
+				<Route
+					path='courses/forschool/9/topic/:topicId/:lessonId'
+					element={<LessonRendererNi />}
 				></Route>
 
 				<Route path='*' element={<NotFoundPage />}></Route>
