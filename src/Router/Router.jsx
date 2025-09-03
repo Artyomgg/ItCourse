@@ -2,7 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router'
 
 import Footer from '../components/Footer'
 import Header from '../components/header'
-import NotFoundPage from '../components/NotFoundPage'
+import NotFoundPage from '../components/NotFound/NotFoundPage'
 import Splash from '../components/Splash'
 import '../css/main.css'
 import HtmlAll from '../pages/AllHTML/HtmlAll'
@@ -12,6 +12,14 @@ import AllReact from '../pages/AllReact/AllReact'
 import ReactNativeAll from '../pages/AllReactNative/ReactNativeAll'
 import CheckExercises from '../pages/CheckExercises'
 import Courses from '../pages/Courses'
+import LessonRenderer from '../pages/Courses for school/6 class/topics/LessonRender'
+import Topics from '../pages/Courses for school/6 class/topics/Topic'
+import LessonRendererSev from '../pages/Courses for school/7 class/topics/LessonRender'
+import TopicsSev from '../pages/Courses for school/7 class/topics/Topic'
+import LessonRendererEi from '../pages/Courses for school/8 class/topics/LessonRender'
+import TopicsEi from '../pages/Courses for school/8 class/topics/Topic'
+import HomeOfClasses from '../pages/Courses for school/HomeOfClasses'
+import HomePageOFAllCourses from '../pages/Courses for school/HomePageOFCourse'
 import CSSALL from '../pages/CSSALL/CSSALL'
 import Home from '../pages/Home'
 import CSS from '../pages/HomePagesToCourses/CSS'
@@ -38,10 +46,6 @@ import Six from '../pages/JS/6'
 import Seven from '../pages/JS/7'
 import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
-import HomePageOFAllCourses from '../pages/Courses for school/HomePageOFCourse'
-import HomeOfClasses from '../pages/Courses for school/HomeOfClasses'
-import Topics from '../pages/Courses for school/6 class/topics/Topic'
-import LessonRenderer from '../pages/Courses for school/6 class/topics/LessonRender'
 
 function AppRouter(props) {
 	return (
@@ -91,11 +95,39 @@ function AppRouter(props) {
 				<Route path='courses/vscode' element={<Vscode />}></Route>
 				<Route path='courses/photoshop' element={<Photoshop />}></Route>
 				<Route path='check' element={<CheckExercises />}></Route>
-				<Route path='courses/forschool' element={<HomePageOFAllCourses/>}></Route>
-				<Route path='courses/forschool/home/:classId' element={<HomeOfClasses/>}></Route>
-				<Route path='courses/forschool/6/topic/:topicId' element={<Topics/>}></Route>
-				<Route path='courses/forschool/6/topic/:topicId/:lessonId' element={<LessonRenderer/>}></Route>
-				
+				<Route
+					path='courses/forschool'
+					element={<HomePageOFAllCourses />}
+				></Route>
+				<Route
+					path='courses/forschool/home/:classId'
+					element={<HomeOfClasses />}
+				></Route>
+				<Route
+					path='courses/forschool/6/topic/:topicId'
+					element={<Topics />}
+				></Route>
+				<Route
+					path='courses/forschool/7/topic/:topicId'
+					element={<TopicsSev />}
+				></Route>
+				<Route
+					path='courses/forschool/8/topic/:topicId'
+					element={<TopicsEi />}
+				></Route>
+				<Route
+					path='courses/forschool/6/topic/:topicId/:lessonId'
+					element={<LessonRenderer />}
+				></Route>
+				<Route
+					path='courses/forschool/7/topic/:topicId/:lessonId'
+					element={<LessonRendererSev />}
+				></Route>
+				<Route
+					path='courses/forschool/8/topic/:topicId/:lessonId'
+					element={<LessonRendererEi />}
+				></Route>
+
 				<Route path='*' element={<NotFoundPage />}></Route>
 			</Routes>
 			<Footer></Footer>

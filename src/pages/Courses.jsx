@@ -69,7 +69,7 @@ function Courses() {
 								</ol>
 								<h4 style={{ marginTop: '5px' }}>Школьная программа</h4>
 								<h4 style={{ marginTop: '5px' }}>
-									Здесь мы изучаем информатику с 6 по 8 класс
+									Здесь мы изучаем информатику с 6 по 9 класс
 								</h4>
 							</div>
 							<Link to='/courses/forschool' className='a-btn'>
