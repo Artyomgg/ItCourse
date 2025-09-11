@@ -1,106 +1,83 @@
+import { useState } from 'react'
 import { useParams } from 'react-router'
 import { topicsData } from '../../../../Data/LessonData/7Class/TopicsData.js'
-import { useState } from 'react'
 
 const LessonRendererSev = () => {
-    const { topicId, lessonId } = useParams()
-    const [selectedImage, setSelectedImage] = useState(null)
+	const { topicId, lessonId } = useParams()
+	const [selectedImage, setSelectedImage] = useState(null)
 
-    // Получаем данные урока
-    const topic = topicsData[topicId]
-    const lesson = topic?.lessons[lessonId]
+	// Получаем данные урока
+	const topic = topicsData[topicId]
+	const lesson = topic?.lessons[lessonId]
 
-    if (!topic || !lesson) {
-        return <div>Урок не найден</div>
-    }
+	if (!topic || !lesson) {
+		return <div>Урок не найден</div>
+	}
 
-    const { lessonContent } = lesson
+	const { lessonContent, src } = lesson
 
-    const openModal = (imgSrc) => {
-        setSelectedImage(imgSrc)
-    }
+	const openModal = imgSrc => {
+		setSelectedImage(imgSrc)
+	}
 
-    const closeModal = () => {
-        setSelectedImage(null)
-    }
+	const closeModal = () => {
+		setSelectedImage(null)
+	}
 
-    return (
-        <div className='lesson-container'>
-            <header className='lesson-header'>
-                <h1>
-                    {topic.title} - {lesson.title}
-                </h1>
-                <span className='topic-icon'>{topic.icon}</span>
-            </header>
+	// Проверяем, является ли src массивом или одиночным значением
+	const renderVideoContent = () => {
+		if (Array.isArray(src)) {
+			// Если это массив видео
+			return (
+				<div className='videos-container'>
+					{src.map((video, index) => (
+						<div key={index} className='video-block'>
+							<h3>Видео {index + 1}</h3>
+							<iframe
+								width='560'
+								height='315'
+								src={video.src}
+								title={`YouTube video player ${index + 1}`}
+								frameBorder='0'
+								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+								referrerPolicy='strict-origin-when-cross-origin'
+								allowFullScreen
+							></iframe>
+						</div>
+					))}
+				</div>
+			)
+		} else {
+			// Если это одиночное видео
+			return (
+				<div className='block-video'>
+					<iframe
+						width='560'
+						height='315'
+						src={src}
+						title='YouTube video player'
+						frameBorder='0'
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+						referrerPolicy='strict-origin-when-cross-origin'
+						allowFullScreen
+					></iframe>
+				</div>
+			)
+		}
+	}
 
-            <main className='lesson-content'>
-                {/* Рендерим основной контент */}
-                {lessonContent.fullContent.map((item, index) => (
-                    <div key={index} className='content-block'>
-                        {item.h2 && <h2>{item.h2}</h2>}
-                        {item.h3 && <h3>{item.h3}</h3>}
-                        {item.p && <p>{item.p}</p>}
-                    </div>
-                ))}
+	return (
+		<div className='lesson-container'>
+			<header className='lesson-header'>
+				<h1>
+					{topic.title} - {lesson.title}
+				</h1>
+				<span className='topic-icon'>{topic.icon}</span>
+			</header>
 
-                {/* Рендерим важные определения */}
-                {lessonContent.boldText.length > 0 && (
-                    <div className='definitions'>
-                        <h3>Важные определения:</h3>
-                        {lessonContent.boldText.map((text, index) => (
-                            <p key={index} className='bold-text'>
-                                <strong>{text}</strong>
-                            </p>
-                        ))}
-                    </div>
-                )}
-
-                {/* Рендерим изображения в грид-сетке */}
-                {lessonContent.image.length > 0 && (
-                    <div className='images'>
-                        <h3>Иллюстрации:</h3>
-                        <div className='images-grid'>
-                            {lessonContent.image.map((imgSrc, index) => (
-                                <img
-                                    key={index}
-                                    src={`/img/course/forschool/7/${imgSrc}`}
-                                    alt={`Иллюстрация ${index + 1}`}
-                                    className='lesson-image'
-                                    onClick={() => openModal(`/img/course/forschool/7/${imgSrc}`)}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {/* Рендерим упражнения */}
-                {lessonContent.exercises.length > 0 && (
-                    <div className='exercises'>
-                        <h2>Упражнения и вопросы</h2>
-                        {lessonContent.exercises.map((exercise, index) => (
-                            <div key={index} className='exercise'>
-                                {exercise.h3 && <h3>{exercise.h3}</h3>}
-                                {exercise.p && <p>{exercise.p}</p>}
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                {/* Модальное окно для изображений */}
-                {selectedImage && (
-                    <div className='image-modal active' onClick={closeModal}>
-                        <span className='close-modal' onClick={closeModal}>×</span>
-                        <img 
-                            src={selectedImage} 
-                            alt="Увеличенное изображение" 
-                            className='modal-image'
-                            onClick={(e) => e.stopPropagation()}
-                        />
-                    </div>
-                )}
-            </main>
-        </div>
-    )
+			{renderVideoContent()}
+		</div>
+	)
 }
 
 export default LessonRendererSev
