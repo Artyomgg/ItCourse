@@ -209,7 +209,7 @@ function TestPage() {
             </button>
             <button 
               className="back-btn"
-              onClick={() => navigate(`/courses/forschool/${classId}`)}
+              onClick={() => navigate(`/courses/forschool/home${classId}`)}
             >
               ← Вернуться к курсу
             </button>
@@ -224,7 +224,7 @@ function TestPage() {
       <header className="test-header">
         <button 
           className="back-button"
-          onClick={() => navigate(`/courses/forschool/${classId}`)}
+          onClick={() => navigate(`/courses/forschool/home/${classId}`)}
         >
           ← Назад к курсу {currentClass.title}
         </button>
