@@ -74,6 +74,26 @@ export const classData = {
 				path: '/courses/forschool/6/topic/7',
 			},
 		],
+		tests: [
+      {
+        id: 1,
+        title: 'ИНФОРМАЦИЯ И ИНФОРМАТИКА',
+        description: '6 КЛАСС. ТЕСТ №1',
+        icon: '📝',
+        questions: 10,
+        duration: '25 минут',
+        path: '/courses/forschool/6/test/1'
+      },
+      {
+        id: 2,
+        title: 'СТРУКТУРА КОМПЬЮТЕРА',
+        description: '6 КЛАСС. ТЕСТ №2',
+        icon: '💻',
+        questions: 10,
+        duration: '25 минут',
+        path: '/courses/forschool/6/test/2'
+      },
+    ]
 	},
 	7: {
 		title: '7 класс',

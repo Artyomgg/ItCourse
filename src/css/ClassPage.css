@@ -215,6 +215,153 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Стили для раздела тестов */
+.tests-section {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tests-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--whiteColor);
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.test-card {
+  background: linear-gradient(145deg, #3a3b50, #2e2f42);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: testAppear 0.6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--class-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.test-card:hover::before {
+  transform: scaleX(1);
+}
+
+@keyframes testAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок теста */
+.test-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.test-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 2px solid var(--class-color);
+}
+
+.test-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--whiteColor);
+  flex: 1;
+}
+
+.test-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+/* Мета-информация теста */
+.test-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.questions-count, .test-duration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.questions-count::before {
+  content: '❓';
+  font-size: 1.1rem;
+}
+
+.test-duration::before {
+  content: '⏰';
+  font-size: 1.1rem;
+}
+
+/* Кнопка теста */
+.test-footer {
+  margin-top: 15px;
+}
+
+.start-test-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  background: var(--class-color);
+}
+
+.start-test-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
 /* Статистика */
 .class-stats {
   display: grid;
@@ -255,7 +402,8 @@
     gap: 20px;
   }
   
-  .topics-grid {
+  .topics-grid,
+  .tests-grid {
     grid-template-columns: 1fr;
   }
   
@@ -271,6 +419,10 @@
     width: 100%;
     text-align: center;
   }
+  
+  .tests-section {
+    padding: 30px 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -278,17 +430,20 @@
     padding: 15px;
   }
   
-  .topic-card {
+  .topic-card,
+  .test-card {
     padding: 20px;
   }
   
-  .topic-header {
+  .topic-header,
+  .test-header {
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
   
-  .topic-meta {
+  .topic-meta,
+  .test-meta {
     flex-direction: column;
     gap: 10px;
     align-items: center;
@@ -298,6 +453,13 @@
     width: 80px;
     height: 80px;
     font-size: 3rem;
+  }
+  
+  .topic-icon,
+  .test-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 }
 

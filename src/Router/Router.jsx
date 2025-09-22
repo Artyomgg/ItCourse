@@ -48,6 +48,7 @@ import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
 import LessonRendererNi from '../pages/Courses for school/9 class/topics/LessonRender'
 import TopicsNi from '../pages/Courses for school/9 class/topics/Topic'
+import TestPage from '../components/TestComponent'
 
 function AppRouter(props) {
 	return (
@@ -137,6 +138,7 @@ function AppRouter(props) {
 					path='courses/forschool/9/topic/:topicId/:lessonId'
 					element={<LessonRendererNi />}
 				></Route>
+				<Route path='courses/forschool/:classId/test/:testId' element={<TestPage/>}></Route>
 
 				<Route path='*' element={<NotFoundPage />}></Route>
 			</Routes>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 import PencilLoader from '../../components/PencilLoader'
 import '../../css/ClassPage.css'
 import { classData } from '../../Data/ClassData.js'
@@ -26,14 +26,20 @@ function HomeOfClasses(props) {
 				navigate(topic.path)
 			}, 500)
 		}
+	}
+
+	const handleTestSelect = test => {
 		setTimeout(() => {
-			navigate(topic.path)
+			navigate(test.path)
 		}, 500)
 	}
 
 	const handleBack = () => {
 		navigate('/courses/forschool')
 	}
+
+	// Проверяем, есть ли тесты у текущего класса
+	const hasTests = currentClass.tests && currentClass.tests.length > 0
 
 	return (
 		<div className='class-page' style={{ '--class-color': currentClass.color }}>
@@ -92,11 +98,62 @@ function HomeOfClasses(props) {
 						</div>
 					</section>
 
+					{/* Раздел с тестами показывается только если есть тесты */}
+					{hasTests && (
+						<section className='tests-section'>
+							<h2>Тесты и проверка знаний</h2>
+							<p className='section-description'>
+								Пройдите тесты для закрепления материала
+							</p>
+							<div className='tests-grid'>
+								{currentClass.tests.map((test, index) => (
+									<div
+										key={test.id}
+										className='test-card'
+										style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
+										onClick={() => handleTestSelect(test)}
+									>
+										<div className='test-header'>
+											<div className='test-icon'>{test.icon}</div>
+											<h3>{test.title}</h3>
+										</div>
+
+										<p className='test-description'>{test.description}</p>
+
+										<div className='test-meta'>
+											<span className='questions-count'>
+												вопросов: {test.questions}
+											</span>
+											<span className='duration'>{test.duration}</span>
+										</div>
+
+										<div className='test-footer'>
+											<Link to={test.path}>
+												<button
+													className='start-test-btn'
+													style={{ backgroundColor: currentClass.color }}
+												>
+													Начать тест
+												</button>
+											</Link>
+										</div>
+									</div>
+								))}
+							</div>
+						</section>
+					)}
+
 					<section className='class-stats'>
 						<div className='stat-card'>
 							<h3>Всего тем в курсе</h3>
 							<span className='stat-number'>{currentClass.topics.length}</span>
 						</div>
+						{hasTests && (
+							<div className='stat-card'>
+								<h3>Доступно тестов</h3>
+								<span className='stat-number'>{currentClass.tests.length}</span>
+							</div>
+						)}
 						<div className='stat-card'>
 							<h3>Общая длительность</h3>
 							<span className='stat-number'>
