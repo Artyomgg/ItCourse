@@ -32,11 +32,11 @@ export const testData = {
 						type: 'multiple',
 						points: 1,
 						options: [
-							{ id: 1, text: 'информационные процессы', correct: true },
+							{ id: 1, text: 'информационные процессы', correct: false }, // исправлено
 							{ id: 2, text: 'программное обеспечение', correct: true },
 							{ id: 3, text: 'алгоритмическое обеспечение', correct: true },
 							{ id: 4, text: 'аппаратное обеспечение', correct: true },
-							{ id: 5, text: 'данные', correct: true },
+							{ id: 5, text: 'данные', correct: false }, // исправлено
 						],
 					},
 					{
@@ -87,7 +87,7 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: '1981', correct: true },
+							{ id: 1, text: '1981', correct: true }, // исправлено (было 1981 - правильно)
 							{ id: 2, text: '1950', correct: false },
 							{ id: 3, text: '1991', correct: false },
 							{ id: 4, text: '1948', correct: false },
@@ -182,10 +182,10 @@ export const testData = {
 						points: 1,
 						options: [
 							{ id: 1, text: 'сканер', correct: false },
-							{ id: 2, text: 'жесткий диск', correct: false },
-							{ id: 3, text: 'монитор', correct: true },
-							{ id: 4, text: 'принтер', correct: false },
-							{ id: 5, text: 'системный блок', correct: false },
+							{ id: 2, text: 'системный блок', correct: false },
+							{ id: 3, text: 'принтер', correct: false },
+							{ id: 4, text: 'жесткий диск', correct: false },
+							{ id: 5, text: 'монитор', correct: true },
 						],
 					},
 					{
@@ -195,15 +195,11 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: 'В постоянной памяти', correct: false },
-							{ id: 2, text: 'В оперативной памяти', correct: false },
-							{ id: 3, text: 'На экране монитора', correct: false },
-							{ id: 4, text: 'В процессоре', correct: false },
-							{
-								id: 5,
-								text: 'На жёстком диске (винчестере)',
-								correct: true,
-							},
+							{ id: 1, text: 'В оперативной памяти', correct: false },
+							{ id: 2, text: 'В процессоре', correct: false },
+							{ id: 3, text: 'На жёстком диске (винчестере)', correct: true },
+							{ id: 4, text: 'На экране монитора', correct: false },
+							{ id: 5, text: 'В постоянной памяти', correct: false },
 						],
 					},
 					{
@@ -213,12 +209,12 @@ export const testData = {
 						type: 'multiple',
 						points: 1,
 						options: [
-							{ id: 1, text: 'Хранение данных', correct: true },
+							{ id: 1, text: 'Обмен данных', correct: false },
 							{ id: 2, text: 'Ввод данных', correct: true },
-							{ id: 3, text: 'Передача данных', correct: true },
+							{ id: 3, text: 'Хранение данных', correct: true },
 							{ id: 4, text: 'Вывод данных', correct: true },
-							{ id: 5, text: 'Обработка данных', correct: true },
-							{ id: 6, text: 'Обмен данных', correct: false },
+							{ id: 5, text: 'Передача данных', correct: false },
+							{ id: 6, text: 'Обработка данных', correct: true },
 						],
 					},
 					{
@@ -227,18 +223,18 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: 'конфигурацией компьютера', correct: false },
-							{ id: 2, text: 'системным блоком', correct: false },
 							{
-								id: 3,
+								id: 1,
 								text: 'программным обеспечением компьютера',
 								correct: false,
 							},
 							{
-								id: 4,
+								id: 2,
 								text: 'аппаратным обеспечением компьютера',
 								correct: true,
 							},
+							{ id: 3, text: 'конфигурацией компьютера', correct: false },
+							{ id: 4, text: 'системным блоком', correct: false },
 						],
 					},
 					{
@@ -249,11 +245,11 @@ export const testData = {
 						points: 1,
 						options: [
 							{ id: 1, text: 'монитор', correct: true },
-							{ id: 2, text: 'мышь', correct: false },
-							{ id: 3, text: 'клавиатура', correct: true },
-							{ id: 4, text: 'системный блок', correct: true },
+							{ id: 2, text: 'системный блок', correct: true },
+							{ id: 3, text: 'сканер', correct: false },
+							{ id: 4, text: 'мышь', correct: true },
 							{ id: 5, text: 'принтер', correct: false },
-							{ id: 6, text: 'сканер', correct: false },
+							{ id: 6, text: 'клавиатура', correct: true },
 						],
 					},
 					{
@@ -262,8 +258,8 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: 'Процессор', correct: true },
-							{ id: 2, text: 'Оперативная память', correct: false },
+							{ id: 1, text: 'Оперативная память', correct: false },
+							{ id: 2, text: 'Процессор', correct: true },
 							{ id: 3, text: 'Жёсткий диск (винчестер)', correct: false },
 							{ id: 4, text: 'Монитор', correct: false },
 							{ id: 5, text: 'Системный блок', correct: false },
@@ -276,11 +272,11 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: 'Клавиатура', correct: false },
+							{ id: 1, text: 'Сканер', correct: false },
 							{ id: 2, text: 'Принтер', correct: true },
-							{ id: 3, text: 'Монитор', correct: false },
-							{ id: 4, text: 'Мышь', correct: false },
-							{ id: 5, text: 'Сканер', correct: false },
+							{ id: 3, text: 'Мышь', correct: false },
+							{ id: 4, text: 'Клавиатура', correct: false },
+							{ id: 5, text: 'Монитор', correct: false },
 						],
 					},
 					{
@@ -290,13 +286,13 @@ export const testData = {
 						type: 'multiple',
 						points: 1,
 						options: [
-							{ id: 1, text: 'Постоянная память', correct: true },
-							{ id: 2, text: 'Монитор', correct: false },
+							{ id: 1, text: 'Процессор', correct: true },
+							{ id: 2, text: 'Жёсткий диск (винчестер)', correct: true },
 							{ id: 3, text: 'Сканер', correct: false },
-							{ id: 4, text: 'Процессор', correct: true },
-							{ id: 5, text: 'Оперативная память', correct: true },
+							{ id: 4, text: 'Постоянная память', correct: true },
+							{ id: 5, text: 'Монитор', correct: false },
 							{ id: 6, text: 'Мышь', correct: false },
-							{ id: 7, text: 'Жёсткий диск (винчестер)', correct: true },
+							{ id: 7, text: 'Оперативная память', correct: true },
 						],
 					},
 					{
@@ -306,11 +302,11 @@ export const testData = {
 						type: 'single',
 						points: 1,
 						options: [
-							{ id: 1, text: 'жёсткий диск (винчестер)', correct: true },
-							{ id: 2, text: 'постоянная память', correct: false },
-							{ id: 3, text: 'процессор', correct: false },
-							{ id: 4, text: 'системный блок', correct: false },
-							{ id: 5, text: 'оперативная память', correct: false },
+							{ id: 1, text: 'процессор', correct: false },
+							{ id: 2, text: 'системный блок', correct: false },
+							{ id: 3, text: 'постоянная память', correct: false },
+							{ id: 4, text: 'оперативная память', correct: false },
+							{ id: 5, text: 'жёсткий диск (винчестер)', correct: true },
 						],
 					},
 				],
