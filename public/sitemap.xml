@@ -9,49 +9,49 @@
   
   <!-- Курсы -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.9</priority>
   </url>
 
 	<!-- Курс по JS -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/js</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/js</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по nodejs -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/nodejs</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/nodejs</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по react -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/react</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/react</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по reactnative -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/reactnative</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/reactnative</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по python -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/python</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/python</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по html -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/html</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/html</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
@@ -59,21 +59,21 @@
 
 	<!-- Курс по CSS -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/css</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/css</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по VSCODE -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/vscode</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/vscode</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
 
 	<!-- Курс по photoshop -->
   <url>
-    <loc>https://itcourse-edu.vercel.app/courses/photoshop</loc>
+    <loc>https://itcourse-edu.vercel.app/#/courses/photoshop</loc>
     <lastmod>2025-05-08</lastmod>
     <priority>0.5</priority>
   </url>
