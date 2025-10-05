@@ -51,6 +51,7 @@ import Seven from '../pages/JS/7'
 import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
 import { sendMetrik } from '../utils/SendMetrics'
+import YandexMetrika from '../components/YandexMetrika.jsx';
 
 function AppRouter(props) {
 	return (
@@ -60,6 +61,7 @@ function AppRouter(props) {
 			}}
 		>
 			<Router>
+				<YandexMetrika/>
 				<Splash />
 				<noscript>
 					<p>JavaScript отключен включите его в браузере !!!!!!</p>
