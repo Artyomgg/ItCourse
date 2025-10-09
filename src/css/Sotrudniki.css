@@ -1,0 +1,1030 @@
+/* ======================== */
+/* === Страница сотрудников === */
+/* ======================== */
+
+.sotrudniki-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Герой секция */
+.employees-hero {
+    background: linear-gradient(135deg, var(--darkColor) 0%, #3a3a52 100%);
+    border-radius: 25px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 2px solid var(--orangeColor);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--orangeColor);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--whiteColor);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Заголовки секций */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--orangeColor);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--whiteColor);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Сетка сотрудников - УБИРАЕМ анимационные классы */
+.employees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    /* Убираем все анимационные свойства */
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Карточка сотрудника - ФИКСИРУЕМ анимации */
+.employee-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    /* Убираем transform из начального состояния */
+    transform: translateY(0) scale(1);
+    /* Фиксируем opacity */
+    opacity: 1;
+    /* Отключаем все сложные анимации */
+    animation: none;
+}
+
+.employee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(253, 172, 130, 0.2);
+    border-color: var(--orangeColor);
+}
+
+/* Простая плавная анимация появления */
+.employee-card {
+    animation: smoothAppear 0.6s ease-out forwards;
+}
+
+@keyframes smoothAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.employee-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.employee-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--orangeColor);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Фиксируем изображение */
+    transform: none;
+    transition: transform 0.3s ease;
+}
+
+.employee-card:hover .employee-avatar img {
+    transform: scale(1.05);
+}
+
+.employee-badge {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    /* Фиксируем анимацию пульсации */
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+}
+
+.employee-info h3 {
+    color: var(--darkColor);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.employee-position {
+    color: var(--lightgrayColor);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.employee-experience {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.employee-skills,
+.employee-achievements {
+    margin-bottom: 20px;
+}
+
+.employee-skills h4,
+.employee-achievements h4 {
+    color: var(--darkColor);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--orangeColor);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    /* Фиксируем теги */
+    transform: none;
+}
+
+.employee-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-achievements li {
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.employee-achievements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--orangeColor);
+    font-weight: bold;
+}
+
+/* Секция формы */
+.join-team-section {
+    background: linear-gradient(135deg, var(--darkColor) 0%, #3a3a52 100%);
+    border-radius: 25px;
+    padding: 50px 40px;
+    margin-bottom: 40px;
+    border: 2px solid var(--orangeColor);
+}
+
+.join-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Форма */
+.join-team-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--darkColor);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--orangeColor);
+    box-shadow: 0 0 0 3px rgba(253, 172, 130, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Сообщение об успехе */
+.success-message {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    color: var(--darkColor);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.success-message p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Секция преимуществ */
+.benefits-section {
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, #585a6e 0%, #4a4c5e 100%);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    /* Фиксируем анимацию */
+    transform: translateY(0);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orangeColor);
+    box-shadow: 0 10px 25px rgba(253, 172, 130, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: var(--orangeColor);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: var(--whiteColor);
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    .sotrudniki-page {
+        padding: 10px;
+    }
+    
+    .employees-hero {
+        padding: 40px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .employees-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-team-form {
+        padding: 25px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .employee-card {
+        padding: 20px;
+    }
+    
+    .employee-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .join-team-section {
+        padding: 30px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ФИКСИРУЕМ все потенциальные проблемы с анимациями */
+.employee-card * {
+    transform: none !important;
+    animation: none !important;
+}
+
+.employee-card {
+    animation: smoothAppear 0.6s ease-out forwards !important;
+}
+
+/* Отключаем все сложные анимации для стабильности */
+.conteiner-with-anim,
+.employee-card:nth-child(n) {
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+/* Дополнительные стили для новой структуры */
+
+/* Секция всех сотрудников */
+.all-employees-section {
+    margin: 60px 0;
+}
+
+/* Фильтры отделов */
+.department-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.department-filter {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--orangeColor);
+    color: var(--whiteColor);
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.department-filter:hover {
+    background: var(--orangeColor);
+    color: var(--darkColor);
+    transform: translateY(-2px);
+}
+
+.department-filter.active {
+    background: var(--orangeColor);
+    color: var(--darkColor);
+    box-shadow: 0 4px 15px rgba(253, 172, 130, 0.3);
+}
+
+.department-filter .count {
+    background: rgba(42, 43, 59, 0.8);
+    color: var(--whiteColor);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.department-filter.active .count {
+    background: var(--darkColor);
+    color: var(--orangeColor);
+}
+
+/* Отдел в карточке */
+.employee-department {
+    color: var(--orangeColor);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Контактная информация */
+.employee-contact {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(253, 172, 130, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.employee-contact p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Специальные стили для лучших сотрудников */
+.employee-card.best-employee {
+    border: 3px solid #ffd700;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.employee-card.best-employee:hover {
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+}
+
+/* Сетка всех сотрудников */
+.employees-grid.all-employees {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.employees-grid.all-employees .employee-card {
+    padding: 20px;
+}
+
+.employees-grid.all-employees .employee-avatar img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Тег "еще" для навыков */
+.skill-tag.more {
+    background: var(--lightgrayColor);
+    font-style: italic;
+}
+
+/* Адаптивность для фильтров */
+@media screen and (max-width: 768px) {
+    .department-filters {
+        gap: 10px;
+    }
+    
+    .department-filter {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .employees-grid.all-employees {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .department-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .department-filter {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+/* ======================== */
+/* === Страница руководства === */
+/* ======================== */
+
+.sotrudniki-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Герой секция */
+.employees-hero {
+    background: linear-gradient(135deg, var(--darkColor) 0%, #3a3a52 100%);
+    border-radius: 25px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 2px solid var(--orangeColor);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--orangeColor);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--whiteColor);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Заголовки секций */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--orangeColor);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--whiteColor);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Сетка руководства */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Карточка руководства */
+.management-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+}
+
+.management-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(253, 172, 130, 0.3);
+    border-color: var(--orangeColor);
+}
+
+/* Простая плавная анимация появления */
+.management-card {
+    animation: smoothAppear 0.6s ease-out forwards;
+}
+
+@keyframes smoothAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.employee-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.employee-avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--orangeColor);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.management-card:hover .employee-avatar img {
+    transform: scale(1.05);
+}
+
+/* Бейджи для руководства */
+.leadership-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    transform-origin: center;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.employee-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(45deg, var(--orangeColor), #ff8a65);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+}
+
+.employee-info h3 {
+    color: var(--darkColor);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.employee-position {
+    color: var(--lightgrayColor);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.employee-experience {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.employee-contact {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(253, 172, 130, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.employee-contact p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.employee-skills,
+.employee-achievements {
+    margin-bottom: 20px;
+}
+
+.employee-skills h4,
+.employee-achievements h4 {
+    color: var(--darkColor);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--orangeColor);
+    padding-bottom: 5px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--orangeColor);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.employee-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-achievements li {
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.employee-achievements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--orangeColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Секция формы */
+.join-team-section {
+    background: linear-gradient(135deg, var(--darkColor) 0%, #3a3a52 100%);
+    border-radius: 25px;
+    padding: 50px 40px;
+    margin-bottom: 40px;
+    border: 2px solid var(--orangeColor);
+}
+
+.join-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Форма */
+.join-team-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--darkColor);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--orangeColor);
+    box-shadow: 0 0 0 3px rgba(253, 172, 130, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Сообщение об успехе */
+.success-message {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    color: var(--darkColor);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.success-message p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Секция преимуществ */
+.benefits-section {
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, #585a6e 0%, #4a4c5e 100%);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    transform: translateY(0);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orangeColor);
+    box-shadow: 0 10px 25px rgba(253, 172, 130, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: var(--orangeColor);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+    color: var(--whiteColor);
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    .sotrudniki-page {
+        padding: 10px;
+    }
+    
+    .employees-hero {
+        padding: 40px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-team-form {
+        padding: 25px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .employee-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .management-card {
+        padding: 20px;
+    }
+    
+    .employee-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .join-team-section {
+        padding: 30px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .employee-info h3 {
+        font-size: 1.4rem;
+    }
+}

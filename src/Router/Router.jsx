@@ -52,6 +52,7 @@ import Eight from '../pages/JS/8'
 import Nine from '../pages/JS/9'
 import { sendMetrik } from '../utils/SendMetrics'
 import YandexMetrika from '../components/YandexMetrika.jsx'
+import Sotrudniki from '../pages/Sotrudniki.jsx'
 
 function AppRouter(props) {
 	return (
@@ -154,6 +155,7 @@ function AppRouter(props) {
 						path='courses/forschool/:classId/test/:testId'
 						element={<TestPage />}
 					></Route>
+					<Route path='emloyees' element={<Sotrudniki/>}></Route>
 
 					<Route path='*' element={<NotFoundPage />}></Route>
 				</Routes>
