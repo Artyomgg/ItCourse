@@ -53,6 +53,11 @@ function Header() {
           </Link>
         </li>
         <li>
+          <Link to='/books' onClick={() => setIsMenuOpen(false)}>
+            Учебники
+          </Link>
+        </li>
+        <li>
           <a
             href='https://chart-beryl.vercel.app/'
             onClick={() => setIsMenuOpen(false)}
