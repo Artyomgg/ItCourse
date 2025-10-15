@@ -19,7 +19,6 @@ export const employeesData = {
 				'Лидерство',
 			],
 			email: 'artem.dudko@itcourse.ru',
-			phone: '+375-(29)-181-46-87',
 		},
 		{
 			id: 2,
@@ -41,7 +40,6 @@ export const employeesData = {
 				'Планирование',
 			],
 			email: 'fedor.tomashev@itcourse.ru',
-			phone: '+375-(29)-354-70-92',
 		},
 		{
 			id: 3,
