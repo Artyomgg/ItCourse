@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import '../css/books.css'
+import { useState, useEffect } from 'react'
 import { informaticsBooks } from '../Data/informatikBooks.js'
-import PDFReader from '../components/PDFReader'
+import '../css/books.css'
 
 function Books(props) {
 	const [selectedGrade, setSelectedGrade] = useState('all')
@@ -16,13 +15,30 @@ function Books(props) {
 
 	const handlePdfOpen = (src, title) => {
 		setSelectedPdf({ src, title })
+		// Блокируем прокрутку основного контента
 		document.body.style.overflow = 'hidden'
 	}
 
 	const handleClosePdf = () => {
 		setSelectedPdf(null)
+		// Восстанавливаем прокрутку
 		document.body.style.overflow = 'auto'
 	}
+
+	// Закрытие по ESC
+	const handleKeyDown = e => {
+		if (e.key === 'Escape') {
+			handleClosePdf()
+		}
+	}
+
+	// Добавляем обработчик ESC
+	useEffect(() => {
+		if (selectedPdf) {
+			document.addEventListener('keydown', handleKeyDown)
+			return () => document.removeEventListener('keydown', handleKeyDown)
+		}
+	}, [selectedPdf])
 
 	return (
 		<div className='books-page'>
@@ -61,7 +77,7 @@ function Books(props) {
 				<div className='conteiner'>
 					<h2 className='books-grid-title'>Доступные учебники</h2>
 					<p className='books-grid-subtitle'>
-						Нажмите на учебник для комфортного чтения
+						Нажмите на учебник для чтения на сайте
 					</p>
 
 					<div className='books-grid'>
@@ -87,11 +103,11 @@ function Books(props) {
 								</div>
 
 								<p className='book-description'>
-									Открыть в удобной читалке с перелистыванием страниц
+									Нажмите для чтения учебника в полноэкранном режиме
 								</p>
 
 								<div className='book-action'>
-									<button className='open-book-btn'>📖 Читать</button>
+									<button className='open-book-btn'>📖 Читать учебник</button>
 								</div>
 							</div>
 						))}
@@ -108,13 +124,31 @@ function Books(props) {
 				</div>
 			</section>
 
-			{/* Кастомная PDF читалка */}
+			{/* Полноэкранный просмотрщик PDF */}
 			{selectedPdf && (
-				<PDFReader
-					pdfUrl={`/${selectedPdf.src}`}
-					onClose={handleClosePdf}
-					title={selectedPdf.title}
-				/>
+				<div className='fullscreen-pdf-viewer'>
+
+
+					<div className='pdf-content'>
+						<iframe
+							src={`/${selectedPdf.src}#view=FitH`}
+							width='100%'
+							height='100%'
+							title={`PDF Viewer - ${selectedPdf.title}`}
+							style={{ border: 'none' }}
+							loading='lazy'
+						/>
+					</div>
+
+					<div className='pdf-footer'>
+						<div className='pdf-footer-content'>
+							<span className='pdf-hint'>
+								Используйте колесо прокрутки для навигации • Нажмите ESC для
+								выхода
+							</span>
+						</div>
+					</div>
+				</div>
 			)}
 		</div>
 	)
