@@ -110,29 +110,174 @@
   flex-wrap: wrap;
 }
 
-/* Стили для карточек учебников */
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-  padding: 30px 20px;
+/* ======================== */
+/* === СТИЛИ ДЛЯ УЧЕБНИКОВ === */
+/* ======================== */
+
+.books-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2a2b3b 0%, #1a1b2b 100%);
+}
+
+.books-hero {
+  background: linear-gradient(135deg, rgba(42, 43, 59, 0.9) 0%, rgba(26, 27, 43, 0.9) 100%),
+              url('/img/55b7feaab8ae077c13a865c4c4899bfcd55cea8b.png') no-repeat center;
+  background-size: cover;
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.books-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(253, 172, 130, 0.1) 0%, transparent 50%);
+}
+
+.books-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--orangeColor), #ff8a65);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.books-hero p {
+  font-size: 1.3rem;
+  color: var(--whiteColor);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.books-filter-section {
+  background: linear-gradient(135deg, #3a3a52 0%, #2a2b3b 100%);
+  padding: 40px 20px;
+  margin: 0 auto 40px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.books-filter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orangeColor), #00f2fe, var(--orangeColor));
+}
+
+.filter-title {
+  text-align: center;
+  color: var(--whiteColor);
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.filter-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(253, 172, 130, 0.3);
+  color: var(--whiteColor);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.filter-btn:hover::before {
+  left: 100%;
+}
+
+.filter-btn:hover {
+  background: rgba(253, 172, 130, 0.2);
+  border-color: var(--orangeColor);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(253, 172, 130, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--orangeColor), #ff8a65);
+  border-color: var(--orangeColor);
+  color: white;
+  box-shadow: 0 5px 15px rgba(253, 172, 130, 0.4);
+}
+
+.books-grid-section {
+  padding: 40px 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
+.books-grid-title {
+  text-align: center;
+  color: var(--whiteColor);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.books-grid-subtitle {
+  text-align: center;
+  color: var(--whiteColor);
+  opacity: 0.8;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
 .book-card {
-  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  background: linear-gradient(145deg, #3a3a52, #2a2b3b);
   border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(253, 172, 130, 0.2);
   position: relative;
   overflow: hidden;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  cursor: pointer;
 }
 
 .book-card::before {
@@ -143,171 +288,1183 @@
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--orangeColor), #00f2fe, var(--orangeColor));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.book-card:hover::before {
+  transform: scaleX(1);
 }
 
 .book-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border-color: var(--orangeColor);
 }
 
-.book-card-image {
+.book-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.book-cover {
   width: 80px;
   height: 100px;
   object-fit: cover;
-  border-radius: 10px;
-  margin: 0 auto 15px;
-  border: 2px solid var(--orangeColor);
-  padding: 5px;
-  background: white;
+  border-radius: 12px;
+  border: 3px solid var(--orangeColor);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
-.book-card-title {
-  color: var(--darkColor);
-  font-size: 1.3rem;
+.book-card:hover .book-cover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 25px rgba(253, 172, 130, 0.4);
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  color: var(--whiteColor);
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 8px;
-  text-align: center;
   line-height: 1.3;
 }
 
-.book-card-class {
-  color: var(--lightgrayColor);
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 15px;
-  background: rgba(253, 172, 130, 0.1);
-  padding: 5px 12px;
-  border-radius: 20px;
+.book-class {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  background: linear-gradient(135deg, var(--orangeColor), #ff8a65);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(253, 172, 130, 0.3);
 }
 
-.book-card-description {
-  color: #666;
+.book-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.book-action {
   text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 20px;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.book-card-button {
+.open-book-btn {
   background: linear-gradient(135deg, var(--orangeColor), #ff8a65);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 12px;
+  padding: 14px 30px;
+  border-radius: 15px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  box-shadow: 0 5px 15px rgba(253, 172, 130, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.open-book-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.open-book-btn:hover::before {
+  left: 100%;
+}
+
+.open-book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(253, 172, 130, 0.5);
+}
+
+.no-books {
   text-align: center;
+  padding: 60px 20px;
+  color: var(--whiteColor);
+}
+
+.no-books-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.no-books h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--orangeColor);
+}
+
+.no-books p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Анимации */
+@keyframes bookCardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.books-grid > * {
+  animation: bookCardAppear 0.6s ease forwards;
+  opacity: 0;
+}
+
+.books-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.books-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.books-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.books-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.books-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.books-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+  .books-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .books-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .book-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .filter-grid {
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .books-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .books-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .book-card {
+    padding: 25px 20px;
+  }
+  
+  .book-title {
+    font-size: 1.2rem;
+  }
+  
+  .books-grid-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Декоративные элементы */
+.floating-books {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.floating-books:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-books:nth-child(2) {
+  top: 20%;
+  right: 10%;
+  animation: float 8s ease-in-out infinite 1s;
+}
+
+.floating-books:nth-child(3) {
+  bottom: 15%;
+  left: 15%;
+  animation: float 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* ======================== */
+/* === PDF ПРОСМОТРЩИК === */
+/* ======================== */
+
+.pdf-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.pdf-viewer-container {
+  width: 95%;
+  height: 95%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleIn 0.3s ease;
+}
+
+.pdf-viewer-header {
+  background: linear-gradient(135deg, #3a3a52 0%, #2a2b3b 100%);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--orangeColor);
+}
+
+.pdf-viewer-title {
+  color: var(--whiteColor);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.pdf-viewer-close {
+  background: var(--orangeColor);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(253, 172, 130, 0.3);
 }
 
-.book-card-button:hover {
-  background: linear-gradient(135deg, #ff8a65, var(--orangeColor));
-  transform: translateY(-2px);
+.pdf-viewer-close:hover {
+  background: #ff8a65;
+  transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(253, 172, 130, 0.4);
 }
 
-/* Анимация появления карточек */
-.books-grid .book-card {
-  animation: bookCardAppear 0.6s ease forwards;
-  opacity: 0;
-  transform: translateY(30px);
+.pdf-viewer-content {
+  flex: 1;
+  background: #f5f5f5;
+  position: relative;
 }
 
-.books-grid .book-card:nth-child(1) { animation-delay: 0.1s; }
-.books-grid .book-card:nth-child(2) { animation-delay: 0.2s; }
-.books-grid .book-card:nth-child(3) { animation-delay: 0.3s; }
-.books-grid .book-card:nth-child(4) { animation-delay: 0.4s; }
-.books-grid .book-card:nth-child(5) { animation-delay: 0.5s; }
-.books-grid .book-card:nth-child(6) { animation-delay: 0.6s; }
+.pdf-viewer-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-@keyframes bookCardAppear {
+/* Анимации для модального окна */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Контролы для PDF */
+.pdf-controls {
+  background: #2a2b3b;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pdf-controls-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.pdf-control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--whiteColor);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.pdf-control-btn:hover {
+  background: var(--orangeColor);
+  border-color: var(--orangeColor);
+}
+
+.pdf-page-info {
+  color: var(--whiteColor);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Адаптивность для PDF просмотрщика */
+@media screen and (max-width: 768px) {
+  .pdf-viewer-overlay {
+    padding: 10px;
+  }
+  
+  .pdf-viewer-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+  .pdf-viewer-header {
+    padding: 15px 20px;
+  }
+  
+  .pdf-viewer-title {
+    font-size: 1.1rem;
+  }
+  
+  .pdf-controls {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pdf-controls-group {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pdf-viewer-header {
+    padding: 12px 15px;
+  }
+  
+  .pdf-viewer-title {
+    font-size: 1rem;
+  }
+  
+  .pdf-viewer-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .pdf-control-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Индикатор загрузки PDF */
+.pdf-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.pdf-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid var(--orangeColor);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Сообщение об ошибке загрузки PDF */
+.pdf-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #f5f5f5;
+  color: #666;
+  text-align: center;
+  padding: 40px;
+}
+
+.pdf-error-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.pdf-error h3 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.pdf-error p {
+  margin-bottom: 20px;
+}
+
+.retry-btn {
+  background: var(--orangeColor);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+  background: #ff8a65;
+  transform: translateY(-2px);
+}
+
+/* ======================== */
+/* === ПОЛНОЭКРАННЫЙ PDF ПРОСМОТРЩИК === */
+/* ======================== */
+
+.fullscreen-pdf-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Активное состояние кнопок фильтра */
-.fancy.active {
-  background: var(--orangeColor);
-  border-color: var(--orangeColor);
+.pdf-header {
+  background: linear-gradient(135deg, #2a2b3b 0%, #1a1b2b 100%);
+  border-bottom: 3px solid var(--orangeColor);
+  padding: 15px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
 }
 
-.fancy.active .text {
-  color: white;
+.pdf-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.fancy:hover.active {
-  background: #ff8a65;
+.pdf-title {
+  color: var(--whiteColor);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
 }
 
-/* Адаптивность */
+.pdf-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.pdf-control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--whiteColor);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+.pdf-control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-download {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border-color: #27ae60;
+}
+
+.pdf-download:hover {
+  background: linear-gradient(135deg, #229954, #27ae60);
+}
+
+.pdf-close {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border-color: #e74c3c;
+}
+
+.pdf-close:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+.pdf-content {
+  flex: 1;
+  background: #2c3e50;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+.pdf-footer {
+  background: linear-gradient(135deg, #2a2b3b 0%, #1a1b2b 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.pdf-footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.pdf-hint {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Эффекты для полноэкранного режима */
+.fullscreen-pdf-viewer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(253, 172, 130, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Анимация появления */
+@keyframes pdfFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fullscreen-pdf-viewer {
+  animation: pdfFadeIn 0.4s ease-out;
+}
+
+/* Адаптивность для мобильных устройств */
 @media screen and (max-width: 768px) {
-  .books-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px 15px;
-  }
-  
-  .book-card {
-    padding: 20px;
-    min-height: 250px;
-  }
-  
-  .book-card-title {
-    font-size: 1.2rem;
-  }
-  
-  .filter-buttons-container {
+  .pdf-header-content {
+    padding: 0 15px;
+    flex-direction: column;
     gap: 10px;
+    text-align: center;
+  }
+  
+  .pdf-title {
+    font-size: 1.2rem;
+    order: 1;
+  }
+  
+  .pdf-controls {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pdf-control-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .pdf-footer-content {
+    padding: 0 15px;
+  }
+  
+  .pdf-hint {
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .books-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .pdf-header {
+    padding: 10px 0;
   }
   
-  .book-card {
-    min-height: 220px;
-    padding: 15px;
-  }
-  
-  .book-card-image {
-    width: 70px;
-    height: 90px;
-  }
-  
-  .book-card-title {
+  .pdf-title {
     font-size: 1.1rem;
   }
   
-  .books-filter {
-    padding: 20px 15px;
+  .pdf-controls {
+    gap: 10px;
+  }
+  
+  .pdf-control-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }
 
-/* Состояние когда нет книг */
-.no-books-message {
-  text-align: center;
+/* Эффект затемнения фона при открытии PDF */
+.books-page.pdf-open {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Плавный переход */
+.books-page {
+  transition: filter 0.3s ease;
+}
+
+/* Улучшенная прокрутка для PDF */
+.pdf-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orangeColor) #2a2b3b;
+}
+
+.pdf-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pdf-content::-webkit-scrollbar-track {
+  background: #2a2b3b;
+}
+
+.pdf-content::-webkit-scrollbar-thumb {
+  background: var(--orangeColor);
+  border-radius: 4px;
+}
+
+.pdf-content::-webkit-scrollbar-thumb:hover {
+  background: #ff8a65;
+}
+
+/* Индикатор загрузки для PDF */
+.pdf-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 43, 59, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
   color: var(--whiteColor);
-  font-size: 1.2rem;
+}
+
+.pdf-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid var(--orangeColor);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.pdf-loading-text {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Эффект перелистывания страниц (опционально) */
+.pdf-page-flip {
+  perspective: 1000px;
+}
+
+.pdf-page-flip iframe {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Затемнение для лучшего чтения */
+.pdf-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 10%,
+    transparent 90%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ======================== */
+/* === КАСТОМНАЯ PDF ЧИТАЛКА === */
+/* ======================== */
+
+.pdf-reader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  animation: pdfReaderEnter 0.4s ease-out;
+}
+
+@keyframes pdfReaderEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pdf-reader-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #0f3460;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+.pdf-reader-header {
+  background: linear-gradient(135deg, #2a2b3b 0%, #1a1b2b 100%);
+  padding: 15px 30px;
+  border-bottom: 3px solid var(--orangeColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pdf-reader-title h2 {
+  color: var(--whiteColor);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.page-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.pdf-reader-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--whiteColor);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.control-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-in, .zoom-out, .zoom-reset {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-color: #3498db;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  border-color: #27ae60;
+}
+
+.close-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border-color: #e74c3c;
+}
+
+/* Navigation */
+.pdf-navigation {
+  background: rgba(42, 43, 59, 0.9);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, var(--orangeColor), #ff8a65);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(253, 172, 130, 0.3);
+}
+
+.nav-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253, 172, 130, 0.4);
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.page-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--whiteColor);
+}
+
+.page-input {
+  width: 60px;
+  padding: 8px;
+  border: 2px solid var(--orangeColor);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--whiteColor);
+  text-align: center;
+  font-weight: 600;
+}
+
+.page-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* PDF Content */
+.pdf-content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  overflow: auto;
+  background: #1e3a5f;
+  position: relative;
+}
+
+.pdf-page-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  max-width: 90%;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pdf-page-container:hover {
+  transform: translateY(-5px);
+}
+
+.react-pdf__Page {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-pdf__Page__canvas {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.pdf-reader-footer {
+  background: linear-gradient(135deg, #2a2b3b 0%, #1a1b2b 100%);
+  padding: 12px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-hints {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Loading States */
+.pdf-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: var(--whiteColor);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid var(--orangeColor);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.page-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #666;
+  font-style: italic;
+}
+
+.pdf-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: var(--whiteColor);
+  text-align: center;
   padding: 40px;
-  background: rgba(42, 43, 59, 0.8);
-  border-radius: 15px;
-  margin: 20px auto;
-  max-width: 500px;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.retry-btn {
+  background: var(--orangeColor);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.retry-btn:hover {
+  background: #ff8a65;
+  transform: translateY(-2px);
+}
+
+/* Анимации перелистывания */
+@keyframes pageTurn {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.page-turn-animation {
+  animation: pageTurn 0.6s ease-in-out;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+  .pdf-reader-header {
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .pdf-reader-title h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .pdf-reader-controls {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pdf-navigation {
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pdf-content-wrapper {
+    padding: 15px;
+  }
+  
+  .pdf-page-container {
+    max-width: 95%;
+    padding: 10px;
+  }
+  
+  .footer-hints {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .control-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .nav-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .page-input {
+    width: 50px;
+    padding: 6px;
+  }
+}
+
+/* Scrollbar styling */
+.pdf-content-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pdf-content-wrapper::-webkit-scrollbar-track {
+  background: #1a1b2b;
+}
+
+.pdf-content-wrapper::-webkit-scrollbar-thumb {
+  background: var(--orangeColor);
+  border-radius: 4px;
+}
+
+.pdf-content-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #ff8a65;
 }
