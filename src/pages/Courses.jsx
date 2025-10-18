@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import PencilLoader from '../components/PencilLoader'
+import { useSEO } from '../hooks/useSeo'
 
 function Courses() {
 	const [isLoading, setIsLoading] = useState(true)
@@ -12,9 +13,14 @@ function Courses() {
 		return () => clearTimeout(timer)
 	}, [])
 
-	useEffect(() => {
-		document.title = 'Курсы | IT-COURSE'
-	}, [])
+	useSEO({
+		title: 'Курсы программирования | IT-COURSE - Все IT курсы',
+		description:
+			'Полный каталог курсов программирования: JavaScript, Python, React, Node.js, HTML, CSS и другие. Обучение с нуля до профессионала. Выбери свой курс!',
+		keywords:
+			'курсы программирования, JavaScript курс, Python обучение, React JS, Node.js, HTML CSS, IT курсы для начинающих, программирование с нуля',
+		ogImage: '/icons8-шапка-выпускника-90.png',
+	})
 	return (
 		<>
 			{/* <head>
@@ -78,10 +84,7 @@ function Courses() {
 						</div>
 
 						<div className='card big'>
-							<img
-								src='/img/course/icons8-node-js-50.png'
-								alt='Node.js'
-							/>
+							<img src='/img/course/icons8-node-js-50.png' alt='Node.js' />
 							<h2>Курс по NODE JS</h2>
 							<div className='desc'>
 								<h4>Здесь мы изучим:</h4>

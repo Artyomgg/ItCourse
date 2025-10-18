@@ -1,19 +1,25 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import PencilLoader from '../components/PencilLoader'
+import { useSEO } from '../hooks/useSeo'
 function Home() {
-		const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
-    return () => clearTimeout(timer);
-  }, []);
-
-	useEffect(() => {
-		document.title = 'Главная | IT-COURSE'
+		const timer = setTimeout(() => {
+			setIsLoading(false)
+		}, 2500)
+		return () => clearTimeout(timer)
 	}, [])
+
+	useSEO({
+		title: 'Главная | IT-COURSE - Практические курсы программирования',
+		description:
+			'IT-COURSE - образовательная платформа с практическими курсами по программированию. Изучайте Python, JavaScript, школьную информатику.',
+		keywords:
+			'IT курсы, программирование, Python, JavaScript, информатика, обучение, учебники по информатике',
+		ogImage: '/icons8-шапка-выпускника-90.png',
+	})
 	return (
 		<>
 			{/* <head>
@@ -38,12 +44,17 @@ function Home() {
 				</div>
 			</section>
 
-			{isLoading == true ? <PencilLoader/> : 
+			{isLoading == true ? (
+				<PencilLoader />
+			) : (
 				<section id='courses'>
 					<h2>Самые популярные курсы на нашей платформе 🔥</h2>
 					<div className='card-conteiner conteiner-with-anim'>
 						<div className='card big'>
-							<img src='\img\course\icons8-внешний-курс-информатика-плоские-значки-плоские-плоские-значки-64.png' alt='JavaScript' />
+							<img
+								src='\img\course\icons8-внешний-курс-информатика-плоские-значки-плоские-плоские-значки-64.png'
+								alt='JavaScript'
+							/>
 							<h2>Курсы по информатике в школе</h2>
 							<div className='desc'>
 								<h4>Здесь мы изучим:</h4>
@@ -51,9 +62,7 @@ function Home() {
 									<li>Всю школьную программу по информатике</li>
 									{/* <li>Работа с DOM</li> */}
 								</ol>
-								<h4 style={{ marginTop: '5px' }}>
-									Школьная программа
-								</h4>
+								<h4 style={{ marginTop: '5px' }}>Школьная программа</h4>
 								<h4 style={{ marginTop: '5px' }}>
 									Здесь мы изучаем информатику с 6 по 9 класс
 								</h4>
@@ -83,7 +92,10 @@ function Home() {
 							</Link>
 						</div>
 						<div className='card big'>
-							<img src='/img/course/icons8-javascript-48.png' alt='JavaScript' />
+							<img
+								src='/img/course/icons8-javascript-48.png'
+								alt='JavaScript'
+							/>
 							<h2>Курс по JS</h2>
 							<div className='desc'>
 								<h4>Здесь мы изучим:</h4>
@@ -105,9 +117,8 @@ function Home() {
 						</div>
 					</div>
 				</section>
-			}
+			)}
 
-			
 			{/* <div
 				style={{
 					display: 'flex',

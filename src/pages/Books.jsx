@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { informaticsBooks } from '../Data/informatikBooks.js'
 import '../css/books.css'
+import { useSEO } from '../hooks/useSeo.js'
 
 function Books(props) {
 	const [selectedGrade, setSelectedGrade] = useState('all')
@@ -40,6 +41,15 @@ function Books(props) {
 		}
 	}, [selectedPdf])
 
+	useSEO({
+		title:
+			'Учебники по информатике 6-8 класс | IT-COURSE - Электронные учебники',
+		description:
+			'Бесплатные электронные учебники по информатике для 6, 7, 8 классов. Читайте учебники онлайн в полноэкранном режиме. Полный комплект школьной литературы.',
+		keywords:
+			'учебники по информатике, информатика 6 класс, информатика 7 класс, информатика 8 класс, электронные учебники, школьные учебники онлайн, IT-COURSE книги',
+		ogImage: '/img/books/books-preview.jpg',
+	})
 	return (
 		<div className='books-page'>
 			{/* Герой секция */}
@@ -127,8 +137,6 @@ function Books(props) {
 			{/* Полноэкранный просмотрщик PDF */}
 			{selectedPdf && (
 				<div className='fullscreen-pdf-viewer'>
-
-
 					<div className='pdf-content'>
 						<iframe
 							src={`/${selectedPdf.src}#view=FitH`}

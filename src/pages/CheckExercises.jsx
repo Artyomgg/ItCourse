@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
+import { useSEO } from '../hooks/useSeo'
 
 function CheckExercises(props) {
-	useEffect(() => {
-		document.title = 'Проверить задания | IT-COURSE'
-	}, [])
+	useSEO({
+		title: 'Проверить задания | IT-COURSE - Отправка выполненных работ',
+	})
 	return (
 		<>
 			<div
