@@ -489,3 +489,20 @@
     opacity: 1;
   }
 }
+
+.tests-anchor-button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 14px;
+	margin-left: auto;
+}
+
+.tests-anchor-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

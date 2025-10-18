@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import PencilLoader from '../../components/PencilLoader'
 import '../../css/ClassPage.css'
@@ -8,8 +8,10 @@ function HomeOfClasses(props) {
 	const { classId } = useParams()
 	const navigate = useNavigate()
 	const [isLoading, setIsLoading] = useState(true)
+	const testsSectionRef = useRef(null)
 
 	const currentClass = classData[classId || 6] // По умолчанию 6 класс
+	const hasTests = currentClass.tests && currentClass.tests.length > 0
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -19,7 +21,7 @@ function HomeOfClasses(props) {
 	}, [])
 
 	const handleTopicSelect = topic => {
-		if (topic.id == 6) {
+		if (classData[6] && topic.id == 6) {
 			window.location.href = 'https://it-course-k.vercel.app/'
 		} else {
 			setTimeout(() => {
@@ -38,8 +40,14 @@ function HomeOfClasses(props) {
 		navigate('/courses/forschool')
 	}
 
-	// Проверяем, есть ли тесты у текущего класса
-	const hasTests = currentClass.tests && currentClass.tests.length > 0
+	const scrollToTests = () => {
+		if (testsSectionRef.current) {
+			testsSectionRef.current.scrollIntoView({ 
+				behavior: 'smooth',
+				block: 'start'
+			})
+		}
+	}
 
 	return (
 		<div className='class-page' style={{ '--class-color': currentClass.color }}>
@@ -54,6 +62,17 @@ function HomeOfClasses(props) {
 						<p>{currentClass.description}</p>
 					</div>
 				</div>
+				
+				{/* Кнопка перехода к тестам */}
+				{hasTests && (
+					<button 
+						onClick={scrollToTests}
+						className='tests-anchor-button'
+						style={{ backgroundColor: currentClass.color }}
+					>
+						📝 Перейти к тестам
+					</button>
+				)}
 			</header>
 
 			{isLoading == true ? (
@@ -98,9 +117,9 @@ function HomeOfClasses(props) {
 						</div>
 					</section>
 
-					{/* Раздел с тестами показывается только если есть тесты */}
+					{/* Раздел с тестами с ref для якоря */}
 					{hasTests && (
-						<section className='tests-section'>
+						<section className='tests-section' ref={testsSectionRef}>
 							<h2>Тесты и проверка знаний</h2>
 							<p className='section-description'>
 								Пройдите тесты для закрепления материала
