@@ -343,24 +343,7 @@
   margin-top: 15px;
 }
 
-.start-test-btn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  background: var(--class-color);
-}
 
-.start-test-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.1);
-}
 
 /* Статистика */
 .class-stats {

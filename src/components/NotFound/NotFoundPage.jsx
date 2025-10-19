@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NotFoundPage.module.css';
+import { Link } from 'react-router'
 
 export default function NotFoundPage() {
     return (
@@ -33,10 +34,10 @@ export default function NotFoundPage() {
                     </div>
                 </div>
                 
-                <a href='/' className={styles.homeButton}>
+                <Link to='/' className={styles.homeButton}>
                     <span className={styles.buttonText}>Вернуться на главную</span>
                     <div className={styles.buttonArrow}></div>
-                </a>
+                </Link>
             </div>
             
             <div className={styles.floatingElements}>
