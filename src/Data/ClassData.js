@@ -170,6 +170,15 @@ export const classData = {
 				duration: '25 минут',
 				path: '/courses/forschool/7/test/2',
 			},
+			{
+				id: 3,
+				title: 'МНОЖЕСТВА И ОПЕРАЦИИ НАД НИМИ',
+				description: 'Основы теории множеств и операции над множествами',
+				icon: '📚',
+				questions: 12,
+				duration: '25 минут',
+				path: '/courses/forschool/7/test/3',
+			},
 		],
 	},
 	8: {
